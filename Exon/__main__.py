@@ -3,6 +3,9 @@ import re
 import time
 from sys import argv, version_info
 
+from Exon.Helper.helper import  START_STIKERS
+import random
+
 from Abg.helpers.human_read import get_readable_time
 from pyrogram import __version__ as pver
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
@@ -238,13 +241,19 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
             time.sleep(0.4)
-            lol.edit_text("🎊")
+            lol.edit_text("❤️‍🔥")
             time.sleep(0.5)
             lol.edit_text("⚡")
             time.sleep(0.3)
-            lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
+            lol.edit_text("Sᴛᴀʀᴛɪɴɢ ʙᴀʙʏ... ")
             time.sleep(0.4)
             lol.delete()
+
+            stkr  = update.effective_message.reply_sticker(
+                random.choice(START_STIKERS),
+                timeout=60,
+            )
+
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
@@ -259,6 +268,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 timeout=60,
                 disable_web_page_preview=False,
             )
+
+            time.sleep(4)
+            stkr.delete()
 
     else:
         update.effective_message.reply_text(gs(chat.id, "grp_start_text"))
