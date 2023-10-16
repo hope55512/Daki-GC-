@@ -13,7 +13,7 @@ Alive_txt = "ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ..."
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
-    lol = message.reply_text(
+    lol = await message.reply_text(
                 Alive_txt
             )
     time.sleep(0.4)
@@ -25,7 +25,7 @@ async def awake(_, message: Message):
     time.sleep(0.4)
     lol.delete()
 
-    stkr  = message.reply_sticker(
+    stkr  = await message.reply_sticker(
                 random.choice(START_STIKERS),
                 timeout=60,
             )
