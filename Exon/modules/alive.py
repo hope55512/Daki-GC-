@@ -25,7 +25,7 @@ async def awake(_, message: Message):
     time.sleep(0.4)
     await lol.delete()
 
-    await message.reply_sticker(
+    stkr = await message.reply_sticker(
                 random.choice(START_STIKERS)
             )
 
@@ -51,8 +51,8 @@ async def awake(_, message: Message):
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )
-    # time.sleep(4)
-    # stkr.delete()
+    time.sleep(4)
+    await stkr.delete()
 
 
 __mod_name__ = "Aʟɪᴠᴇ"
