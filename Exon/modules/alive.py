@@ -16,18 +16,17 @@ async def awake(_, message: Message):
     lol = await message.reply_text(
                 Alive_txt
             )
-    # time.sleep(0.4)
-    # lol.edit_text("🌩")
-    # time.sleep(0.5)
-    # lol.edit_text("⚡")
-    # time.sleep(0.3)
-    # lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
-    # time.sleep(0.4)
-    # lol.delete()
+    time.sleep(0.4)
+    lol.edit_text("🌩")
+    time.sleep(0.5)
+    lol.edit_text("⚡")
+    time.sleep(0.3)
+    lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
+    time.sleep(0.4)
+    lol.delete()
 
     await message.reply_sticker(
-                random.choice(START_STIKERS),
-                timeout=60,
+                random.choice(START_STIKERS)
             )
 
     TEXT = f"**ʜᴇʏ {message.from_user.mention},\n\n✨ɪ ᴀᴍ {BOT_NAME}**\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n\n"
