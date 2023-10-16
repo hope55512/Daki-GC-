@@ -7,7 +7,7 @@ from telethon import __version__ as tlhver
 from Exon import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, Abishnoi as  pbot
 
 import random
-from Exon.Helper.helper import PHOTO
+from Exon.Helper.helper import PHOTO,START_STIKERS
 import time
 Alive_txt = "ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ..."
 
@@ -24,6 +24,11 @@ async def awake(_, message: Message):
     lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
     time.sleep(0.4)
     lol.delete()
+
+    stkr  = message.effective_message.reply_sticker(
+                random.choice(START_STIKERS),
+                timeout=60,
+            )
 
     TEXT = f"**ʜᴇʏ {message.from_user.mention},\n\n✨ɪ ᴀᴍ {BOT_NAME}**\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n\n"
     TEXT += f"➤ **ᴍʏ ᴍᴀsᴛᴇʀ :** [KIRA](tg://user?id={OWNER_ID})\n\n"
@@ -47,6 +52,8 @@ async def awake(_, message: Message):
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )
+    time.sleep(4)
+    stkr.delete()
 
 
 __mod_name__ = "Aʟɪᴠᴇ"
