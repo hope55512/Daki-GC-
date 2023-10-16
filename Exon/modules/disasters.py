@@ -527,7 +527,7 @@ UNWHITELIST_HANDLER = CommandHandler(
     ("rmwhitelist"), removewhitelist, run_async=True
 )
 WHITELISTLIST_HANDLER = CommandHandler(
-    ["whitelistlist", "WhiteList User"], whitelistlist, run_async=True
+    ["whitelistlist"], whitelistlist, run_async=True
 )
 TIGERLIST_HANDLER = CommandHandler(["lightshooters"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
