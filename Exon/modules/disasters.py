@@ -508,35 +508,35 @@ def devlist(update: Update, context: CallbackContext):
     m.edit_text(reply, parse_mode=ParseMode.HTML)
 
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addshadowslayers"), addsudo, run_async=True)
+SUDO_HANDLER = CommandHandler(("addsudo"), addsudo, run_async=True)
 SUPPORT_HANDLER = CommandHandler(
-    ("addsupport", "addSupport User"), addsupport, run_async=True
+    ("addsupport"), addsupport, run_async=True
 )
 TIGER_HANDLER = CommandHandler(("addlightshooters"), addtiger)
 WHITELIST_HANDLER = CommandHandler(
-    ("addWhiteList User", "addwhitelist"), addwhitelist, run_async=True
+    ("addwhitelist"), addwhitelist, run_async=True
 )
 UNSUDO_HANDLER = CommandHandler(
-    ("rmsudo", "rmshadowslayers"), removesudo, run_async=True
+    ("rmsudo"), removesudo, run_async=True
 )
 UNSUPPORT_HANDLER = CommandHandler(
-    ("rmsupport", "rmSupport User"), removesupport, run_async=True
+    ("rmsupport"), removesupport, run_async=True
 )
 UNTIGER_HANDLER = CommandHandler(("rmlightshooters"), removetiger)
 UNWHITELIST_HANDLER = CommandHandler(
-    ("rmwhitelist", "rmWhiteList User"), removewhitelist, run_async=True
+    ("rmwhitelist"), removewhitelist, run_async=True
 )
 WHITELISTLIST_HANDLER = CommandHandler(
     ["whitelistlist", "WhiteList User"], whitelistlist, run_async=True
 )
 TIGERLIST_HANDLER = CommandHandler(["lightshooters"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
-    ["supportlist", "Support Users"], supportlist, run_async=True
+    ["supportlist"], supportlist, run_async=True
 )
 SUDOLIST_HANDLER = CommandHandler(
-    ["sudolist", "shadowslayers"], sudolist, run_async=True
+    ["sudolist"], sudolist, run_async=True
 )
-DEVLIST_HANDLER = CommandHandler(["devlist", "sakuraunion"], devlist, run_async=True)
+DEVLIST_HANDLER = CommandHandler(["devlist"], devlist, run_async=True)
 
 
 dispatcher.add_handler(SUDO_HANDLER)
