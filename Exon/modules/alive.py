@@ -7,7 +7,7 @@ from telethon import __version__ as tlhver
 from Exon import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, Abishnoi as  pbot
 
 import random
-from Helper.helper import PHOTO
+from Exon.Helper.helper import PHOTO
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
