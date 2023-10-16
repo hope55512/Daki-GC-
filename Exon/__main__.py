@@ -3,7 +3,7 @@ import re
 import time
 from sys import argv, version_info
 
-from Exon.Helper.helper import  START_STIKERS
+from Exon.Helper.helper import  START_STIKERS,PHOTO
 import random
 
 from Abg.helpers.human_read import get_readable_time
@@ -58,6 +58,18 @@ buttons = [
     ],
 ]
 
+aliveBtns = [
+    [
+        InlineKeyboardButton(text="🚑 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="📘 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/HoshinoXUpdates"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="+ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ +",
+            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+        ),
+    ],
+]
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -273,7 +285,13 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             stkr.delete()
 
     else:
-        update.effective_message.reply_text(gs(chat.id, "grp_start_text"))
+        update.effective_message.reply_photo(
+            random.choice(PHOTO),
+            caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
+                uptime
+            ),reply_markup=InlineKeyboardMarkup(aliveBtns),
+            parse_mode=ParseMode.HTML,
+        )
 
     if hasattr(update, "callback_query"):
         query = update.callback_query
