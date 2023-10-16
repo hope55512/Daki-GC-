@@ -26,7 +26,7 @@ from telethon import __version__ as tver
 import Exon.modules.no_sql.users_db as sql
 from Exon import BOT_USERNAME
 from Exon import LOGGER as log
-from Exon import OWNER_ID, OWNER_USERNAME, SUPPORT_CHAT, TOKEN
+from Exon import OWNER_ID, OWNER_USERNAME, SUPPORT_CHAT,UPDATE_CHAT, TOKEN
 from Exon import Abishnoi as pbot
 from Exon import StartTime, dispatcher, telethn, updater
 
@@ -49,19 +49,20 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text=f"🚁 ʜᴇʟᴘ 🚁", callback_data="help_back"),
-        InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
+        InlineKeyboardButton(text="📑Aʙᴏᴜᴛ", callback_data="ABG_"),
+        InlineKeyboardButton(text="Aɪ 🤖", callback_data="ABG_"),
+        # InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
     ],
     [
-        InlineKeyboardButton(text="🏡 ᴀʙᴏᴜᴛ 🏡", callback_data="ABG_"),
-        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text=f"ℹ Hᴇʟᴘ Aɴᴅ  Cᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        # InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
     ],
 ]
 
 aliveBtns = [
     [
         InlineKeyboardButton(text="🚑 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="📘 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/HoshinoXUpdates"),
+        InlineKeyboardButton(text="📘 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATE_CHAT}"),
     ],
     [
         InlineKeyboardButton(

@@ -31,7 +31,7 @@ from pyrogram.types import CallbackQuery
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.ext import CallbackQueryHandler
 
-from Exon import BOT_NAME, OWNER_ID, OWNER_USERNAME, SUPPORT_CHAT
+from Exon import BOT_NAME, OWNER_ID, OWNER_USERNAME, SUPPORT_CHAT,UPDATE_CHAT
 from Exon import Abishnoi as pbot
 from Exon import dispatcher
 
@@ -64,26 +64,16 @@ def ABG_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="ᴀᴅᴍɪɴs", callback_data="ABG_admin"),
-                        InlineKeyboardButton(text="ɴᴏᴛᴇs", callback_data="ABG_notes"),
+                        InlineKeyboardButton(text="🚑 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+                        InlineKeyboardButton(text="📘 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATE_CHAT}"),
+                    ],
+                    [
+                        InlineKeyboardButton(text=f"💻 Sᴛᴀᴛs", callback_data="stats_callback"),
+                        InlineKeyboardButton(text="👨‍💻 Dᴇᴠᴇʟᴏᴘᴇʀ", url=f"tg://user?id={OWNER_ID}")
                     ],
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ", callback_data="ABG_support"
-                        ),
-                        InlineKeyboardButton(
-                            text="ᴄʀᴇᴅɪᴛs", callback_data="ABG_credit"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
-                            callback_data="source_",
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="ɢᴏ ʙᴀᴄᴋ", callback_data="start_back"
+                            text="↩ Gᴏ Bᴀᴄᴋ", callback_data="start_back"
                         ),
                     ],
                 ]
