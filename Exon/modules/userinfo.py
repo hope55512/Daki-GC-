@@ -226,21 +226,21 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"ㅤ ㅤㅤ      ✦ ᴜsᴇʀ ɪɴғᴏ ✦\n•❅─────────────────❅•\n"
-        f"➻ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-        f"➻ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
+        f"ㅤ✦ *ᴜsᴇʀ ɪɴғᴏ* ✦\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n"
+        f"➤ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
+        f"➤ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n➻ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
+        text += f"\n➤ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➻ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
+        text += f"\n➤ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
 
-    text += f"\n➻ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
+    text += f"\n➤ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n➻ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
+        _stext = "\n➤ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
 
         status = status = bot.get_chat_member(chat.id, user.id).status
         if status:
@@ -301,10 +301,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/The_Apexx/456"
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/HoshinoXUpdates/13"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪꜱᴀꜱᴛᴇʀ", url="https://t.me/The_Apexx/455"
+                                "Dɪsᴀsᴛᴇʀ", url="https://t.me/HoshinoXUpdates/14"
                             ),
                         ],
                     ]

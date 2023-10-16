@@ -150,14 +150,14 @@ def ABG_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="sᴜᴘᴘᴏʀᴛ", url=f"t.me/{SUPPORT_CHAT}"
+                            text="🚑 Sᴜᴘᴘᴏʀᴛ", url=f"t.me/{SUPPORT_CHAT}"
                         ),
                         InlineKeyboardButton(
-                            text="ᴜᴘᴅᴀᴛᴇs", url="https://t.me/Abishnoi_bots"
+                            text="📚 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATE_CHAT}"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ", callback_data="ABG_"),
+                        InlineKeyboardButton(text="⤶  Gᴏ Bᴀᴄᴋ", callback_data="ABG_"),
                     ],
                 ]
             ),
