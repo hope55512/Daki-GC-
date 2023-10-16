@@ -17,13 +17,13 @@ async def awake(_, message: Message):
                 Alive_txt
             )
     time.sleep(0.4)
-    lol.edit_text("🌩")
+    await lol.edit_text("🌩")
     time.sleep(0.5)
-    lol.edit_text("⚡")
+    await lol.edit_text("⚡")
     time.sleep(0.3)
-    lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
+    await lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
     time.sleep(0.4)
-    lol.delete()
+    await lol.delete()
 
     await message.reply_sticker(
                 random.choice(START_STIKERS)
