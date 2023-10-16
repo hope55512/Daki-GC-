@@ -8,9 +8,23 @@ from Exon import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, Abishnoi as  pb
 
 import random
 from Exon.Helper.helper import PHOTO
+import time
+Alive_txt = "ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ..."
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
+    lol = message.effective_message.reply_text(
+                Alive_txt
+            )
+    time.sleep(0.4)
+    lol.edit_text("🌩")
+    time.sleep(0.5)
+    lol.edit_text("⚡")
+    time.sleep(0.3)
+    lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
+    time.sleep(0.4)
+    lol.delete()
+
     TEXT = f"**ʜᴇʏ {message.from_user.mention},\n\n✨ɪ ᴀᴍ {BOT_NAME}**\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n\n"
     TEXT += f"➤ **ᴍʏ ᴍᴀsᴛᴇʀ :** [KIRA](tg://user?id={OWNER_ID})\n\n"
     TEXT += f"➤ **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
