@@ -45,21 +45,12 @@ async def feedback(e):
     user_name = e.sender.first_name
     mention = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
     Exon = (
-        "https://telegra.ph/file/753bfe51f0e0314f1f3ff.jpg",
-        "https://telegra.ph/file/20bab4a499d6dccd823f1.jpg",
-        "https://telegra.ph/file/2ef1c255ac51d9febb3f4.jpg",
-        "https://telegra.ph/file/bc3a10df7c66e6333bba6.jpg",
-        "https://telegra.ph/file/bf283996f928a6ab5b625.jpg",
-        "https://telegra.ph/file/bf283996f928a6ab5b625.jpg",
-        "https://telegra.ph/file/43b4f5a5645ab1cd1dd7c.jpg",
-        "https://telegra.ph/file/0f5240ad4d50d5dac57fe.jpg",
-        "https://telegra.ph/file/f6128a7a197cf088ba5e0.jpg",
-        "https://telegra.ph/file/53d0320dcaa0d21da19c0.jpg",
-        "https://telegra.ph/file/fc988e9441acfb5fe71a7.jpg",
-        "https://telegra.ph/file/731387573fd96e3cfc2f5.jpg",
-        "https://telegra.ph/file/6c9951e14cece66f2fc3a.jpg",
+        "https://telegra.ph/file/b338214b85fee0c81aec5.jpg",
+        "https://telegra.ph/file/8e6f8bad1d448e3398468.jpg",
+        "https://telegra.ph/file/28296667cb727005c5f9e.jpg",
+        "https://telegra.ph/file/ae35d8a131d0e175c0e49.jpg",
     )
-    NATFEED = ("https://telegra.ph/file/2dd04f407b16bc2cfdf76.jpg",)
+    NATFEED = ("https://te.legra.ph/file/7b94977d85a9fd152081a.jpg",)
     BUTTON = [[Button.url("Go To Support Group", f"https://t.me/{SUPPORT_CHAT}")]]
     TEXT = "ᴛʜᴀɴᴋꜱ ꜰᴏʀ ʏᴏᴜʀ ꜰᴇᴇᴅʙᴀᴄᴋ, ɪ ʜᴏᴘᴇ ʏᴏᴜ ʜᴀᴘᴘʏ ᴡɪᴛʜ ᴏᴜʀ ꜱᴇʀᴠɪᴄᴇ."
     GIVE = "ɢɪᴠᴇ ꜱᴏᴍᴇ ᴛᴇxᴛ ꜰᴏʀ ꜰᴇᴇᴅʙᴄᴋ ✨"
