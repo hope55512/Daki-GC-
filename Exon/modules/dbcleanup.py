@@ -238,12 +238,12 @@ __handlers__ = [DB_CLEANUP_HANDLER, LEAVE_MUTED_CHATS_HANDLER, BUTTON_HANDLER]
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 
-# """
-from Exon.modules.language import gs
+# # """
+# from Exon.modules.language import gs
 
 
-def get_help(chat):
-    return gs(chat, "dbclean_help")
+# def get_help(chat):
+#     return gs(chat, "dbclean_help")
 
 
-# """
+# # """

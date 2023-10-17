@@ -559,17 +559,17 @@ def recho(update: Update, context: CallbackContext):
             )
 
 
-__mod_name__ = "𝐑-ᴄᴍᴅs"
+# __mod_name__ = "𝐑-ᴄᴍᴅs"
 
-# ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
-
-
-# """
-from Exon.modules.language import gs
+# # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 
-def get_help(chat):
-    return gs(chat, "rcmds_help")
+# # """
+# from Exon.modules.language import gs
 
 
-# """
+# def get_help(chat):
+#     return gs(chat, "rcmds_help")
+
+
+# # """`
