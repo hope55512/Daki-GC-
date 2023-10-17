@@ -10,6 +10,7 @@ from Exon import DEMONS, DEV_USERS, DRAGONS, OWNER_ID, TIGERS, WOLVES, dispatche
 from Exon.modules.helper_funcs.chat_status import dev_plus, sudo_plus, whitelist_plus
 from Exon.modules.helper_funcs.extraction import extract_user
 from Exon.modules.log_channel import gloggable
+import html
 
 ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "Exon/elevated_users.json")
 
