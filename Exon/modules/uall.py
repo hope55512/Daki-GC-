@@ -212,16 +212,16 @@ async def get_users(show):
     os.remove("userslist.txt")
 
 
-__mod_name__ = "𝐔ᴀʟʟ"
+# __mod_name__ = "Uᴀʟʟ"
 
-# ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
+# # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
-# """
-from Exon.modules.language import gs
+# # """
+# from Exon.modules.language import gs
 
 
-def get_help(chat):
-    return gs(chat, "uall_help")
+# def get_help(chat):
+#     return gs(chat, "uall_help")
 
 
 # """
