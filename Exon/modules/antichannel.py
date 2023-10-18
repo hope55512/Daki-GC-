@@ -194,7 +194,7 @@ def eliminate_linked_channel_msg(update: Update, _: CallbackContext):
         return
 
 
-__mod_name__ = "𝐀-ᴄʜᴀɴɴᴇʟ"
+__mod_name__ = "A-ᴄʜᴀɴɴᴇʟ"
 
 
 CLEANLINKED_HANDLER = CommandHandler(
@@ -219,7 +219,7 @@ __handlers__ = [
 ]
 
 
-__mod_name__ = "𝐀-ᴄʜᴀɴɴᴇʟ"
+__mod_name__ = "A-ᴄʜᴀɴɴᴇʟ"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
