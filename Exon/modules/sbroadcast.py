@@ -62,7 +62,7 @@ async def broadcast_cmd(client: Client, message: Message):
                 if message.reply_to_message:
                     x = message.reply_to_message.message_id
                     y = message.chat.id
-                    await pgram.forward_messagesint(chat["_id"], y, x)
+                    await pgram.forward_messages(int(chat["_id"], y, x))
                 else:
                     aa = await client.send_message(int(chat["_id"]), msg)
 
