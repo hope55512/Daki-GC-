@@ -57,11 +57,11 @@ async def broadcast_cmd(client: Client, message: Message):
 
     if "-user" in texttt:
         for chat in users:
-            if message.reply_to_message:
-                x = message.reply_to_message.message_id
-                y = message.chat.id
-            else:
-                msg = get_arg(message)
+            # if message.reply_to_message:
+            #     x = message.reply_to_message.message_id
+                
+            # else:
+            #     msg = get_arg(message)
             try:
                 if message.reply_to_message:
                     x = message.reply_to_message.message_id
