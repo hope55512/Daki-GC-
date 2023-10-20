@@ -32,6 +32,10 @@ async def broadcast_cmd(client: Client, message: Message):
         return await message.reply_text(
             "<b>BROADCASTING COMMANDS</b>\n-user : broadcasting all user's DM\n-group : broadcasting all groups\n-all : broadcasting both\nEx: /broadcast-user"
         )
+    
+    if message.reply_to_message:
+        x = message.reply_to_message.id
+        y = message.chat.id
 
     if message.reply_to_message is None and not get_arg(message):
         return await message.reply_text(
