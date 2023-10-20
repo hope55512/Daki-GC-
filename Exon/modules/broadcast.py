@@ -59,9 +59,9 @@ async def broadcast_cmd(client: Client, message: Message):
                 msg = get_arg(message)
             try:
                 if message.reply_to_message:
-                    aa = await msg.copy(chat.user_id)
+                    aa = await msg.copy(int(chat["_id"]),)
                 else:
-                    aa = await client.send_message(chat.user_id, msg)
+                    aa = await client.send_message(int(chat["_id"]), msg)
 
                 usersss += 1
                 await asyncio.sleep(0.3)
@@ -76,9 +76,9 @@ async def broadcast_cmd(client: Client, message: Message):
                 msg = get_arg(message)
             try:
                 if message.reply_to_message:
-                    aa = await msg.copy(chat.chat_id)
+                    aa = await msg.copy(int(chat["chat_id"]))
                 else:
-                    aa = await client.send_message(chat.chat_id, msg)
+                    aa = await client.send_message(int(chat["chat_id"]))
 
                 chatttt += 1
                 await asyncio.sleep(0.3)
