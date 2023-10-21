@@ -45,13 +45,13 @@ pymongo[srv]==4.5.0
 odmantic==0.9.2
 opencv-python-headless==4.8.0.76
 pykeyboard==0.1.5
+search_engine_parser==0.6.8
 wget==3.2
 wikipedia==1.4.0
 bing_image_downloader==1.1.2
 lyricsgenius==3.0.1
 jikanpy==4.3.2
 gtts==2.3.1
-search_engine_parser==0.6.8
 googletrans==2.4.0
 gpytranslate==1.5.1
 cloudscraper==1.2.70
