@@ -40,7 +40,13 @@ from Exon.modules.no_sql.global_bans_db import is_user_gbanned
 from Exon.modules.no_sql.users_db import get_user_num_chats
 
 
-STATS_INFO = f"\n\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/{UPDATE_CHAT}) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/{SUPPORT_CHAT})\n\n『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Kira](t.me/{OWNER_USERNAME})  』"
+
+STATS_INFO = [
+    [
+        InlineKeyboardButton(text="🚑 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="📘 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATE_CHAT}"),
+    ]
+]
 
 
 def no_by_per(totalhp, percentage):
@@ -395,8 +401,8 @@ def set_about_me(update: Update, context: CallbackContext):
 def stats(update: Update, context: CallbackContext):
     stats = "<b>📑 🄲🅄🅁🅁🄴🄽🅃 🅂🅃🄰🅃🅂:</b>\n\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result+= STATS_INFO
-    update.effective_message.reply_photo("https://telegra.ph/file/c91952a21cf0ba0bfaffb.jpg",result, parse_mode=ParseMode.HTML)
+    result+= "\n\n<b>ᴍʏ ᴍᴀꜱᴛᴇʀ</b>: @SIAmKira"
+    update.effective_message.reply_photo("https://telegra.ph/file/c91952a21cf0ba0bfaffb.jpg",result,reply_markup=InlineKeyboardMarkup(STATS_INFO),parse_mode=ParseMode.HTML)
 
 
 def about_bio(update: Update, context: CallbackContext):
