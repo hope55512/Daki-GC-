@@ -380,7 +380,6 @@ def woof(update, context):
 
 
 WALLPAPER_HANDLER = DisableAbleCommandHandler("wallpaper", wallpaper)
-COSPLAY_HANDLER = DisableAbleCommandHandler("cosplay", cosplay)
 TICKLE_HANDLER = DisableAbleCommandHandler("tickle", tickle)
 FEED_HANDLER = DisableAbleCommandHandler("feed", feed)
 GASM_HANDLER = DisableAbleCommandHandler("gasm", gasm)
@@ -429,7 +428,6 @@ CRINGE_HANDLER = DisableAbleCommandHandler("cringe", cringe)
 
 
 dispatcher.add_handler(SLAP_HANDLER)
-dispatcher.add_handler(COSPLAY_HANDLER)
 dispatcher.add_handler(KILLGIF_HANDLER)
 dispatcher.add_handler(HAPPY_HANDLER)
 dispatcher.add_handler(WINK_HANDLER)
@@ -478,7 +476,6 @@ dispatcher.add_handler(FOXGIRL_HANDLER)
 
 __handlers__ = [
     SLAP_HANDLER,
-    COSPLAY_HANDLER,
     LIZARD_HANDLER,
     GOOSE_HANDLER,
     WOOF_HANDLER,
