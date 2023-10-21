@@ -23,7 +23,7 @@ async def bingimg_search(client: Client, message: Message):
         )  # Return error if no query is provided
 
     search_message = message.reply_text(
-        "Searching image using Bing search 🔎"
+        "🔎"
     )  # Display searching message
 
     # Send request to Bing image search API
@@ -62,7 +62,7 @@ async def googleimg_search(client: Client, message: Message):
         )  # Return error if no query is provided
 
     search_message = message.reply_text(
-        "Searching image using Google search 🔎"
+        "🔎"
     )  # Display searching message
 
     # Send request to Google image search API

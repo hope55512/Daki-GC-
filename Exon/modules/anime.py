@@ -509,3 +509,16 @@ __handlers__ = [
     AIRING_HANDLER,
     # KAIZOKU_SEARCH_HANDLER,
 ]
+
+
+__mod_name__ = "Aɴɪᴍᴇ"
+
+# ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
+
+
+# """
+from Exon.modules.language import gs
+
+
+def get_help(chat):
+    return gs(chat, "anime_help")
