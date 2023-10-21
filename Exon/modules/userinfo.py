@@ -40,6 +40,9 @@ from Exon.modules.no_sql.global_bans_db import is_user_gbanned
 from Exon.modules.no_sql.users_db import get_user_num_chats
 
 
+STATS_INFO = f"\n\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/{UPDATE_CHAT}) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/{SUPPORT_CHAT})\n\n『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Kira](t.me/{OWNER_USERNAME})  』"
+
+
 def no_by_per(totalhp, percentage):
     """
     rtype: num of `percentage` from total
@@ -390,9 +393,9 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>📑 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛs:</b>\n\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>📑 🄲🅄🅁🅁🄴🄽🅃 🅂🅃🄰🅃🅂:</b>\n\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result+= f"\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/{UPDATE_CHAT}) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/{SUPPORT_CHAT})\n\n『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Kira](t.me/{OWNER_USERNAME})  』"
+    result+= STATS_INFO
     update.effective_message.reply_photo("https://telegra.ph/file/c91952a21cf0ba0bfaffb.jpg",result, parse_mode=ParseMode.HTML)
 
 
