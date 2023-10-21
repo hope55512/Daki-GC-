@@ -26,6 +26,9 @@ from Exon import (
     OWNER_ID,
     TIGERS,
     WOLVES,
+    UPDATE_CHAT,
+    SUPPORT_CHAT,
+    OWNER_USERNAME,
     dispatcher,
     telethn,
 )
@@ -389,6 +392,7 @@ def set_about_me(update: Update, context: CallbackContext):
 def stats(update: Update, context: CallbackContext):
     stats = "<b>📑 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛs:</b>\n\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
+    result+= f"\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/{UPDATE_CHAT}) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/{SUPPORT_CHAT})\n\n『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Kira](t.me/{OWNER_USERNAME})  』"
     update.effective_message.reply_photo("https://telegra.ph/file/c91952a21cf0ba0bfaffb.jpg",result, parse_mode=ParseMode.HTML)
 
 
