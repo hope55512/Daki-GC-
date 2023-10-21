@@ -30,6 +30,7 @@ telethon==1.30.3
 ujson==5.8.0
 pycryptodome==3.18.0
 prettyconf
+nekos.py==1.1.0
 base58==2.1.1
 pytimeparse==1.1.8
 SibylSystem==0.0.24
