@@ -145,13 +145,3 @@ dispatcher.add_handler(BLUSERS_HANDLER)
 __mod_name__ = "B-ᴜsᴇʀs"
 __handlers__ = [BL_HANDLER, UNBL_HANDLER, BLUSERS_HANDLER]
 
-# ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
-# """
-from Exon.modules.language import gs
-
-
-def get_help(chat):
-    return gs(chat, "buser_help")
-
-
-# """

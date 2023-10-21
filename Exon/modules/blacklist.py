@@ -528,21 +528,11 @@ def blacklist_help_bse(update: Update, context: CallbackContext):
     bot.answer_callback_query(query.id)
 
 
-__mod_name__ = "B-ʟɪsᴛ️"
+__mod_name__ = "Bʟᴀᴄᴋʟɪꜱᴛ"
+
+from Exon.modules.language import gs
 
 
 def get_help(chat):
-    return [
-        gs(chat, "blacklist_help_bse"),
-        [
-            InlineKeyboardButton(
-                text="ʙʟᴀᴄᴋʟɪsᴛ", callback_data="asusau_help_wblack"
-            ),
-            InlineKeyboardButton(
-                text="ʙ-sᴛɪᴄᴋᴇʀ", callback_data="asusau_help_sblack"
-            ),
-        ],
-    ]
+    return gs(chat, "buser_help")
 
-
-# """

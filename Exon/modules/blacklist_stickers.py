@@ -508,7 +508,7 @@ def __stats__():
     )
 
 
-__mod_name__ = "S-ʙʟɪsᴛ"
+__mod_name__ = "ʙʟ-ꜱᴛɪᴄᴋ"
 
 BLACKLIST_STICKER_HANDLER = DisableAbleCommandHandler(
     "blsticker",
@@ -538,3 +538,10 @@ dispatcher.add_handler(ADDBLACKLIST_STICKER_HANDLER)
 dispatcher.add_handler(UNBLACKLIST_STICKER_HANDLER)
 dispatcher.add_handler(BLACKLISTMODE_HANDLER)
 dispatcher.add_handler(BLACKLIST_STICKER_DEL_HANDLER)
+
+
+from Exon.modules.language import gs
+
+
+def get_help(chat):
+    return gs(chat, "sticker_blacklist_help")
