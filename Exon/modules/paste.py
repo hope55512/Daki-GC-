@@ -30,7 +30,7 @@ async def isPreviewUp(preview: str) -> bool:
     return False
 
 
-@app.on_cmd(["webss", "ss", "webshot"])
+@app.on_cmd("paste")
 @capture_err
 async def paste_func(_, message):
     if not message.reply_to_message:
