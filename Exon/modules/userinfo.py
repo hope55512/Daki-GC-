@@ -399,7 +399,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>📑 🄲🅄🅁🅁🄴🄽🅃 🅂🅃🄰🅃🅂:</b>\n\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>📑 🄲🅄🅁🅁🄴🄽🅃 🅂🅃🄰🅃🅂:</b>\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     result+= "\n\n<b>ᴍʏ ᴍᴀꜱᴛᴇʀ</b>: @SIAmKira"
     update.effective_message.reply_photo("https://telegra.ph/file/c91952a21cf0ba0bfaffb.jpg",result,reply_markup=InlineKeyboardMarkup(STATS_INFO),parse_mode=ParseMode.HTML)

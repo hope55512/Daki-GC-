@@ -134,15 +134,12 @@ __handlers__ = [PING_HANDLER, PINGALL_HANDLER]
 
 __mod_name__ = "Pɪɴɢ"
 
-# ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
+
+# from Exon.modules.language import gs
 
 
-# """
-from Exon.modules.language import gs
+# def get_help(chat):
+#     return gs(chat, "ping_help")
 
 
-def get_help(chat):
-    return gs(chat, "ping_help")
 
-
-# """

@@ -159,7 +159,7 @@ async def active_afk(_, message: Message):
 
     await add_afk(user_id, details)
     await message.reply_sticker(
-        "CAACAgUAAx0CUgguZAABAdegY2N5paaiPapUxRm0RYy9Xf6dPEYAAisIAAJ2PRlXxkn7UgOIdewqBA"
+        "CAACAgIAAx0CcIkIWQAClpVlM4P2LGGQ6DJREo1_WOYlYY4YbgACXy0AAjhX-Ul8aTPAtbi5uTAE"
     )
     await message.reply_text(f"{message.from_user.first_name} ɪs ɴᴏᴡ ᴀғᴋ!")
 

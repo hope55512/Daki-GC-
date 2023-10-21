@@ -1,33 +1,3 @@
-"""
-MIT License
-
-Copyright (c) 2022 ABISHNOI69
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
-# ""DEAR PRO PEOPLE,  DON'T REMOVE & CHANGE THIS LINE
-# TG :- @Abishnoi1m
-#     UPDATE   :- Abishnoi_bots
-#     GITHUB :- ABISHNOI69 ""
-
-
 import os
 from time import sleep
 
@@ -48,12 +18,6 @@ from Exon import *
 from Exon import LOGGER
 from Exon.events import register
 
-CMD_HELP = "/ !"
-
-
-# ================================================
-
-
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
         return isinstance(
@@ -67,7 +31,6 @@ async def is_register_admin(chat, user):
 
 
 @register(pattern="^/unbanall$")
-@register(pattern="^/unbanall@Exon_Robot$")
 async def _(event):
     chat = await event.get_chat()
     admin = chat.admin_rights.ban_users
@@ -79,12 +42,12 @@ async def _(event):
 
     is_admin = False
     try:
-        cutiepii = await telethn(GetParticipantRequest(event.chat_id, event.sender_id))
+        Exon = await telethn(GetParticipantRequest(event.chat_id, event.sender_id))
     except UserNotParticipantError:
         is_admin = False
     else:
         if isinstance(
-            cutiepii.participant,
+            Exon.participant,
             (
                 ChannelParticipantAdmin,
                 ChannelParticipantCreator,
@@ -95,10 +58,10 @@ async def _(event):
         return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜɴᴍᴜᴛᴇᴀʟʟ!__")
 
     if not admin and not creator:
-        await event.reply("`I ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪssɪᴏɴs!`")
+        await event.reply("`ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪssɪᴏɴs!`")
         return
 
-    done = await event.reply("sᴇᴀʀᴄʜɪɴɢ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛ ʟɪsᴛs.")
+    done = await event.reply("sᴇᴀʀᴄʜɪɴɢ ᴘᴀʀᴛɪᴄɪᴘᴀɴᴛ ʟɪsᴛs")
     p = 0
     async for i in telethn.iter_participants(
         event.chat_id, filter=ChannelParticipantsKicked, aggressive=True
@@ -119,26 +82,25 @@ async def _(event):
     if p == 0:
         await done.edit("ɴᴏ ᴏɴᴇ ɪs ʙᴀɴɴᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ")
         return
-    required_string = "sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴʙᴀɴɴᴇᴅ **{}** ᴜsᴇʀs"
+    required_string = "sᴜᴄᴇssғᴜʟʟʏ ᴜɴʙᴀɴɴᴇᴅ **{}** ᴜsᴇʀs"
     await event.reply(required_string.format(p))
 
 
-@register(pattern="^/unmuteall@Exon_Robot$")
 @register(pattern="^/unmuteall$")
 async def _(event):
     if event.is_private:
         return await event.respond(
-            "__ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ʙᴇ ᴜsᴇ ɪɴ ɢʀᴏᴜᴘꜱ ᴀɴᴅ ᴄʜᴀɴɴᴇʟꜱ!__"
+            "__This command can be use in groups and channels!__"
         )
 
     is_admin = False
     try:
-        cutiepii = await telethn(GetParticipantRequest(event.chat_id, event.sender_id))
+        Exon = await telethn(GetParticipantRequest(event.chat_id, event.sender_id))
     except UserNotParticipantError:
         is_admin = False
     else:
         if isinstance(
-            cutiepii.participant,
+            Exon.participant,
             (
                 ChannelParticipantAdmin,
                 ChannelParticipantCreator,
@@ -146,17 +108,17 @@ async def _(event):
         ):
             is_admin = True
     if not is_admin:
-        return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴꜱ ᴄᴀɴ ᴜɴᴍᴜᴛᴇᴀʟʟ!__")
+        return await event.respond("__ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜɴᴍᴜᴛᴇᴀʟʟ!__")
     chat = await event.get_chat()
     admin = chat.admin_rights.ban_users
     creator = chat.creator
 
     # Well
     if not admin and not creator:
-        await event.reply("`I ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴇʀᴍɪꜱꜱɪᴏɴꜱ!`")
+        await event.reply("`I don't have enough permissions!`")
         return
 
-    done = await event.reply("ᴡᴏʀᴋɪɴɢ ...")
+    done = await event.reply("Working ...")
     p = 0
     async for i in telethn.iter_participants(
         event.chat_id, filter=ChannelParticipantsBanned, aggressive=True
@@ -170,7 +132,7 @@ async def _(event):
                 functions.channels.EditBannedRequest(event.chat_id, i, rights)
             )
         except FloodWaitError as ex:
-            LOGGER.warn(f"ꜱʟᴇᴇᴘɪɴɢ ғᴏʀ {ex.seconds} ꜱᴇᴄᴏɴᴅꜱ")
+            LOGGER.warn(f"sʟᴇᴇᴘɪɴɢ ғᴏʀ {ex.seconds} sᴇᴄᴏɴᴅs")
             sleep(ex.seconds)
         except Exception as ex:
             await event.reply(str(ex))
@@ -178,13 +140,13 @@ async def _(event):
             p += 1
 
     if p == 0:
-        await done.edit("ɴᴏ ᴏɴᴇ ɪꜱ ᴍᴜᴛᴇᴅ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ")
+        await done.edit("ɴᴏ ᴏɴᴇ ɪs ᴍᴜᴛᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ")
         return
-    required_string = "ꜱᴜᴄᴄᴇꜱꜱғᴜʟʟʏ ᴜɴᴍᴜᴛᴇᴅ **{}** ᴜꜱᴇʀꜱ"
+    required_string = "sᴜᴄᴇssғᴜʟʟʏ ᴜɴᴍᴜᴛᴇᴅ **{}** ᴜsᴇʀs"
     await event.reply(required_string.format(p))
 
 
-@register(pattern="^/gusers$")
+@register(pattern="^/users$")
 async def get_users(show):
     if not show.is_group:
         return
@@ -192,12 +154,12 @@ async def get_users(show):
         return
     info = await telethn.get_entity(show.chat_id)
     title = info.title or "this chat"
-    mentions = f"ᴜꜱᴇʀꜱ ɪɴ {title}: \n"
+    mentions = f"ᴜsᴇʀs ɪɴ {title}: \n"
     async for user in telethn.iter_participants(show.chat_id):
         mentions += (
-            f"\n ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ {user.id}"
+            f"\nᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs  {user.id}"
             if user.deleted
-            else f"\n[{user.first_name}](tg://user?id={user.id}) {user.id}"
+            else f"\n[{user.first_name}](tg://user?id={user.id}) ❣ {user.id}"
         )
 
     with open("userslist.txt", "w+") as file:
@@ -205,23 +167,20 @@ async def get_users(show):
     await telethn.send_file(
         show.chat_id,
         "userslist.txt",
-        caption=f"Users in {title}",
+        caption=f"ᴜsᴇʀs ɪɴ {title}",
         reply_to=show.id,
     )
 
     os.remove("userslist.txt")
 
 
-# __mod_name__ = "Uᴀʟʟ"
+__mod_name__ = "Aᴅᴠᴀɴᴄᴇ"
+__help__ = """
 
-# # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
+➥ /unbanall : ᴜɴʙᴀɴ ᴀʟʟ ᴍᴀᴍʙᴇʀ 
 
-# # """
-# from Exon.modules.language import gs
+➥ /unmuteall : ᴜɴᴍᴜᴛᴇ ᴀʟʟ ᴍᴀᴍʙᴇʀ
 
+➥ /users : ɢᴇᴛ ɢʀᴏᴜᴘ ᴜsᴇʀs ʟɪsᴛ
 
-# def get_help(chat):
-#     return gs(chat, "uall_help")
-
-
-# """
+"""
