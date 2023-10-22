@@ -98,7 +98,7 @@ def error_callback(update: Update, context: CallbackContext):
             context.bot.send_document(
                 ERROR_LOGS,
                 open("error.txt", "rb"),
-                caption=f"#{context.error.identifier}\n<b>ʏᴏᴜʀ ᴄᴜᴛᴇ ᴇxᴏɴ ʜᴀᴠᴇ ᴀɴ ᴇʀʀᴏʀ ғᴏʀ ʏᴏᴜ:"
+                caption=f"#{context.error.identifier}\n<b>ʏYour Hoshino caught An Error:"
                 f"</b>\n<code>{e}</code>",
                 parse_mode="html",
             )
@@ -107,10 +107,10 @@ def error_callback(update: Update, context: CallbackContext):
         url = f"https://spaceb.in/{response['payload']['id']}"
         context.bot.send_message(
             ERROR_LOGS,
-            text=f"#{context.error.identifier}\n<b>Your Cute Exon Nagisa Have An Error For You:"
+            text=f"#{context.error.identifier}\n<b>Your Hoshino caught An Error:"
             f"</b>\n<code>{e}</code>",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("sᴇxʏ ᴇxᴏɴ ᴇʀʀᴏʀ ʟᴏɢs", url=url)]],
+                [[InlineKeyboardButton("ʜᴏꜱʜɪɴᴏ  ᴇʀʀᴏʀ ʟᴏɢꜱ", url=url)]],
             ),
             parse_mode=ParseMode.HTML,
         )
