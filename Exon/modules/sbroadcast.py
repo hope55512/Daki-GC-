@@ -38,7 +38,7 @@ async def braodcast_message(client, message, _):
         served_users = []
         susers = await get_all_users()
         for user in susers:
-            served_users.append(int(user["user_id"]))
+            served_users.append(int(user["_id"]))
         for i in served_users:
             try:
                 m = (
