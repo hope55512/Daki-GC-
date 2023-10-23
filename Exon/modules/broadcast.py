@@ -102,7 +102,7 @@ async def forward_type_broadcast(c: Client, m: Message):
         return
     split = m.command
 
-    chat = sql.get_all_chats()
+    chat = [i["chat_id"] for i in sql.get_all_chats()]
     user = [i["_id"] for i in get_all_users()]
     alll = chat + user
     if len(split) != 2:
@@ -144,9 +144,11 @@ async def forward_type_broadcast(c: Client, m: Message):
     except Exception:
         pass
     return
-@pgram.on_cmd(["cforward","cfwd"] &SUDOER)
-async def forward_type_broadcast(c: Client, m: Message):
-    repl = m.reply_to_message
+
+
+# @pgram.on_cmd(["cforward","cfwd"] &SUDOER)
+# async def forward_type_broadcast(c: Client, m: Message):
+#     repl = m.reply_to_message
     if not repl:
         await m.reply_text("Please reply to message to broadcast it")
         return
@@ -158,21 +160,21 @@ async def forward_type_broadcast(c: Client, m: Message):
     if len(split) != 2:
         tag = "all"
     else:
-    #     try:
-    #         if split[0].lower() == "-u":
-    #             tag = "user"
-    #         elif split[0].lower() == "-c":
-    #             tag = "chat"
-    #         else:
-    #             tag = "all"
-    #     except IndexError:
-    #         pass
-    # if tag == "chat":
-    #     peers = chat
-    # elif tag == "user":
-    #     peers = user
-    # else:
-    #     peers = alll
+        try:
+            if split[0].lower() == "-u":
+                tag = "user"
+            elif split[0].lower() == "-c":
+                tag = "chat"
+            else:
+                tag = "all"
+        except IndexError:
+            pass
+    if tag == "chat":
+        peers = chat
+    elif tag == "user":
+        peers = user
+    else:
+        peers = alll
     
         xx = await m.reply_text("Broadcasting...")
 
