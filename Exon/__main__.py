@@ -738,11 +738,11 @@ def migrate_chats(update: Update, context: CallbackContext):
 def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendAnimation(
-                f"@{SUPPORT_CHAT}",
-                animation="https://te.legra.ph/file/8dea393ddf4fc2e339179.gif",
+            dispatcher.bot.send_photo(
+                chat_id=f"@{SUPPORT_CHAT}",
+                photo=random.choice(PHOTO),
                 caption=f"""
-ㅤ🥀 {dispatcher.bot.first_name} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ ✨ .....
+ㅤ {dispatcher.bot.first_name} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ....
 
 ━━━━━━━━━━━━━
 ⍟ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/{OWNER_USERNAME})
