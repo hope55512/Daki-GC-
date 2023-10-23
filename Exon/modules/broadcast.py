@@ -7,6 +7,7 @@ import Exon.modules.no_sql.users_db as sql
 from Exon import DEV_USERS, OWNER_ID
 from Exon import Abishnoi as pgram
 from Exon.modules.no_sql.users_db import get_all_users
+import sleep
 
 # get_arg function to retrieve an argument from a message
 def get_arg(message):
@@ -89,3 +90,56 @@ async def broadcast_cmd(client: Client, message: Message):
     await tex.edit_text(
         f"<b>Message Successfully Sent</b> \nTotal Users: <code>{usersss}</code> \nFailed Users: <code>{uerror}</code> \nTotal GroupChats: <code>{chatttt}</code> \nFailed GroupChats: <code>{cerror}</code>"
     )
+
+
+
+@pgram.on_cmd(["forward","fwd"])
+async def forward_type_broadcast(c: Client, m: Message):
+    repl = m.reply_to_message
+    if not repl:
+        await m.reply_text("Please reply to message to broadcast it")
+        return
+    split = m.command
+
+    chat = sql.get_all_chats()
+    user = [i["_id"] for i in get_all_users()]
+    alll = chat + user
+    if len(split) != 2:
+        tag = "all"
+    else:
+        try:
+            if split[0].lower() == "-u":
+                tag = "user"
+            elif split[0].lower() == "-c":
+                tag = "chat"
+            else:
+                tag = "all"
+        except IndexError:
+            pass
+    if tag == "chat":
+        peers = chat
+    elif tag == "user":
+        peers = user
+    else:
+        peers = alll
+    
+    xx = await m.reply_text("Broadcasting...")
+
+    failed = 0
+    total = len(peers)
+    for peer in peers:
+        try:
+            await repl.forward(int(peer))
+            await sleep(0.1)
+        except Exception:
+            failed += 1
+            pass
+    txt = f"Broadcasted message to {total-failed} peers out of {total}\nFailed to broadcast message to {failed} peers"
+    if not failed:
+        txt = f"Broadcasted message to {total} peers"
+    await m.reply_text(txt)
+    try:
+        await xx.delete()
+    except Exception:
+        pass
+    return
