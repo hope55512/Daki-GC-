@@ -101,7 +101,7 @@ async def forward_type_broadcast(c: Client, m: Message):
         return
     split = m.command
 
-    chat = [i["chat_id"] for i in get_all_users()]
+    chat = sql.get_all_chats()
     user = [i["_id"] for i in get_all_users()]
     alll = chat + user
     if len(split) != 2:
