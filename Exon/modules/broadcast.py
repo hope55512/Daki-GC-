@@ -8,6 +8,7 @@ from Exon import DEV_USERS, OWNER_ID
 from Exon import Abishnoi as pgram
 from Exon.modules.no_sql.users_db import get_all_users
 from asyncio import sleep
+SUDOER = DEV_USERS + OWNER_ID
 
 # get_arg function to retrieve an argument from a message
 def get_arg(message):
@@ -93,7 +94,7 @@ async def broadcast_cmd(client: Client, message: Message):
 
 
 
-@pgram.on_cmd(["forward","fwd"])
+@pgram.on_cmd(["forward","fwd"] &SUDOER)
 async def forward_type_broadcast(c: Client, m: Message):
     repl = m.reply_to_message
     if not repl:
@@ -143,7 +144,7 @@ async def forward_type_broadcast(c: Client, m: Message):
     except Exception:
         pass
     return
-@pgram.on_cmd(["cforward","cfwd"])
+@pgram.on_cmd(["cforward","cfwd"] &SUDOER)
 async def forward_type_broadcast(c: Client, m: Message):
     repl = m.reply_to_message
     if not repl:
@@ -157,39 +158,39 @@ async def forward_type_broadcast(c: Client, m: Message):
     if len(split) != 2:
         tag = "all"
     else:
-        try:
-            if split[0].lower() == "-u":
-                tag = "user"
-            elif split[0].lower() == "-c":
-                tag = "chat"
-            else:
-                tag = "all"
-        except IndexError:
-            pass
-    if tag == "chat":
-        peers = chat
-    elif tag == "user":
-        peers = user
-    else:
-        peers = alll
+    #     try:
+    #         if split[0].lower() == "-u":
+    #             tag = "user"
+    #         elif split[0].lower() == "-c":
+    #             tag = "chat"
+    #         else:
+    #             tag = "all"
+    #     except IndexError:
+    #         pass
+    # if tag == "chat":
+    #     peers = chat
+    # elif tag == "user":
+    #     peers = user
+    # else:
+    #     peers = alll
     
-    xx = await m.reply_text("Broadcasting...")
+        xx = await m.reply_text("Broadcasting...")
 
-    failed = 0
-    total = len(peers)
-    for peer in peers:
+        failed = 0
+        total = len(peers)
+        for peer in peers:
+            try:
+                await repl.forward(int(peer))
+                await sleep(0.1)
+            except Exception:
+                failed += 1
+                pass
+        txt = f"Broadcasted message to {total-failed} peers out of {total}\nFailed to broadcast message to {failed} peers"
+        if not failed:
+            txt = f"Broadcasted message to {total} peers"
+        await m.reply_text(txt)
         try:
-            await repl.forward(int(peer))
-            await sleep(0.1)
+            await xx.delete()
         except Exception:
-            failed += 1
             pass
-    txt = f"Broadcasted message to {total-failed} peers out of {total}\nFailed to broadcast message to {failed} peers"
-    if not failed:
-        txt = f"Broadcasted message to {total} peers"
-    await m.reply_text(txt)
-    try:
-        await xx.delete()
-    except Exception:
-        pass
-    return
+        return
