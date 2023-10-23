@@ -7,7 +7,7 @@ import Exon.modules.no_sql.users_db as sql
 from Exon import DEV_USERS, OWNER_ID
 from Exon import Abishnoi as pgram
 from Exon.modules.no_sql.users_db import get_all_users
-import sleep
+from asyncio import sleep
 
 # get_arg function to retrieve an argument from a message
 def get_arg(message):
