@@ -8,7 +8,6 @@ from Exon import DEV_USERS, OWNER_ID
 from Exon import Abishnoi as pgram
 from Exon.modules.no_sql.users_db import get_all_users
 from asyncio import sleep
-SUDOER = DEV_USERS + OWNER_ID
 
 # get_arg function to retrieve an argument from a message
 def get_arg(message):
@@ -94,8 +93,16 @@ async def broadcast_cmd(client: Client, message: Message):
 
 
 
-@pgram.on_cmd(["forward","fwd"] &SUDOER)
+@pgram.on_cmd(["forward","fwd"])
 async def forward_type_broadcast(c: Client, m: Message):
+    user_id = m.from_user.id
+    texttt = m.text.split(" ")
+
+    if user_id not in [OWNER_ID] + DEV_USERS:
+        await m.reply_text(
+            "You are not authorized to use this command. Only the owner and authorized users can use it."
+        )
+        return
     repl = m.reply_to_message
     if not repl:
         await m.reply_text("Please reply to message to broadcast it")
