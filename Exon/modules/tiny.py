@@ -6,7 +6,6 @@ from PIL import Image
 from Exon import telethn as tbot
 from Exon.events import register
 
-
 @register(pattern="^/tiny ?(.*)")
 async def _(event):
     reply = await event.get_reply_message()
