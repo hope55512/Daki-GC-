@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from Exon import DEV_USERS
 from Exon import Abishnoi as app
 from Exon.utils.sections import section
-
+import os
 
 async def get_user_info(user, already=False):
     if not already:
