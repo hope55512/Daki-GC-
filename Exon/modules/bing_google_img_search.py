@@ -87,12 +87,18 @@ async def googleimg_search(client: Client, message: Message):
     search_message.delete()
     message.delete()
 
-__help__ = """
-ᴛʜᴇ ᴇꜰꜰᴇᴄᴛɪᴠᴇ ᴍᴏᴅᴜʟᴇ ᴛʜᴀᴛ ʜᴇʟᴘ ʏᴏᴜ ꜱᴇᴀʀᴄʜ ɪᴍᴀɢᴇꜱ ᴏɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ʙɪɴɢ
+# __help__ = """
+# ᴛʜᴇ ᴇꜰꜰᴇᴄᴛɪᴠᴇ ᴍᴏᴅᴜʟᴇ ᴛʜᴀᴛ ʜᴇʟᴘ ʏᴏᴜ ꜱᴇᴀʀᴄʜ ɪᴍᴀɢᴇꜱ ᴏɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ʙɪɴɢ
 
- ➢ /googleimg*:* ᴛᴏ ɢᴇᴛ ʀᴇꜱᴜʟᴛᴇᴅ ɪᴍᴀɢᴇ ꜰʀᴏᴍ ɢᴏᴏɢʟᴇ.
+#  ➢ /googleimg*:* ᴛᴏ ɢᴇᴛ ʀᴇꜱᴜʟᴛᴇᴅ ɪᴍᴀɢᴇ ꜰʀᴏᴍ ɢᴏᴏɢʟᴇ.
 
- ➢ /bingimg*:* ᴛᴏ ɢᴇᴛ ʀᴇꜱᴜʟᴛᴇᴅ ɪᴍᴀɢᴇ ꜰʀᴏᴍ ʙɪɴɢ.
-"""
+#  ➢ /bingimg*:* ᴛᴏ ɢᴇᴛ ʀᴇꜱᴜʟᴛᴇᴅ ɪᴍᴀɢᴇ ꜰʀᴏᴍ ʙɪɴɢ.
+# """
 
 __mod_name__ = "Iᴍɢ"
+
+from Exon.modules.language import gs
+
+
+def get_help(chat):
+    return gs(chat, "img_help")
