@@ -676,6 +676,12 @@ welcome_help: |
     ʏᴏᴜ ᴄᴀɴ ᴇᴠᴇɴ sᴇᴛ ɪᴍᴀɢᴇs/ɢɪғs/ᴠɪᴅᴇᴏs/ᴠᴏɪᴄᴇ ᴍᴇssᴀɢᴇs ᴀs ᴛʜᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ʙʏ 
     ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴛʜᴇ ᴅᴇsɪʀᴇᴅ ᴍᴇᴅɪᴀ, ᴀɴᴅ ᴄᴀʟʟɪɴɢ /setwelcome
 
+whispher_help:  |
+   ➤ Sᴇɴᴅ ꜱᴇᴄʀᴇᴛ ᴍᴇꜱꜱᴀɢᴇ ᴛᴏ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴜꜱᴇʀ
+
+   ** Format:** @HoshinoXproBot [USERNAME | ID] [TEXT] 
+
+   **Example:** @HoshinoXproBot @username You Are Noob :(
 
 sticker_help: |
    ➤ /stickerid *:* ʀᴇᴘʟʏ ᴛᴏ ᴀ ꜱᴛɪᴄᴋᴇʀ ᴛᴏ ᴍᴇ ᴛᴏ ᴛᴇʟʟ ʏᴏᴜ ɪᴛꜱ ғɪʟᴇ ɪᴅ.
@@ -684,6 +690,7 @@ sticker_help: |
    ➤ /delsticker *:* ʀᴇᴘʟʏ ᴛᴏ ʏᴏᴜʀ ᴀɴɪᴍᴇ ᴇxɪꜱᴛ ꜱᴛɪᴄᴋᴇʀ ᴛᴏ ʏᴏᴜʀ ᴘᴀᴄᴋ ᴛᴏ ᴅᴇʟᴇᴛᴇ ɪᴛ.
    ➤ /stickers *:* ғɪɴᴅ ꜱᴛɪᴄᴋᴇʀꜱ ғᴏʀ ɢɪᴠᴇɴ ᴛᴇʀᴍ ᴏɴ ᴄᴏᴍʙᴏᴛ ꜱᴛɪᴄᴋᴇʀ ᴄᴀᴛᴀʟᴏɢᴜᴇ
    ➤ /mmf <ʀᴇᴘʟʏ ᴡɪᴛʜ ᴛᴇxᴛ> *:* ᴛᴏ ᴅʀᴀᴡ a ᴛᴇxᴛ ғᴏʀ ꜱᴛɪᴄᴋᴇʀ 
+   ➤ /tiny*:* reply a sticker and see magic
 
 
 
