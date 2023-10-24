@@ -147,8 +147,15 @@ UsᴇʀNᴀᴍᴇ: @{message.chat.username}
 """)
 
 __mod_name__ = "Sᴡᴇʟᴄᴏᴍᴇ"
+
 __help__ = """
 ──「 Sᴡᴇʟᴄᴏᴍᴇ 」──
 
 **➢ /swelcome [ ENABLE/DISABLE ]** - Turn On The Special Welcome For Groups
 """
+
+from Exon.modules.language import gs
+
+
+def get_help(chat):
+    return gs(chat, "swelcome_help")

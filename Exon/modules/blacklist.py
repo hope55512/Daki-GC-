@@ -534,5 +534,5 @@ from Exon.modules.language import gs
 
 
 def get_help(chat):
-    return gs(chat, "buser_help")
+    return gs(chat, "blacklist_help")
 

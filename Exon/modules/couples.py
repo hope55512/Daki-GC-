@@ -152,3 +152,9 @@ Choose couples in your chat
 """
 
 __mod_name__ = "Cᴏᴜᴘʟᴇ"
+
+from Exon.modules.language import gs
+
+
+def get_help(chat):
+    return gs(chat, "couple_help")
