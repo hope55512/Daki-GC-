@@ -19,6 +19,8 @@ def ReplyCheck(message: Message):
     return reply_id
 
 
+# omment
+
 infotext = (
     "[{full_name}](tg://user?id={user_id})\n\n"
     " ➻ ᴜsᴇʀ ɪᴅ: `{user_id}`\n"
