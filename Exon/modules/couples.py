@@ -13,7 +13,7 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from Exon import Abishnoi as app
-from Exon.modules.no_sql.couples_db import _get_image, get_couple, save_couple
+from Exon.utils.mongo import _get_image, get_couple, save_couple
 
 def dt():
     now = datetime.now()

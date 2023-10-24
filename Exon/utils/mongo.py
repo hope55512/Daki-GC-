@@ -1,7 +1,21 @@
-from Exon.modules.no_sql import Asudb
+from motor.motor_asyncio import AsyncIOMotorClient as MongoCli
 
-afkdb = Asudb.afk
-coupledb = Asudb.couple
+from Exon import MONGO_URI
+from typing import Dict, Union
+
+mongo = MongoCli(MONGO_URI)
+db = mongo.HoshinoBotV3
+
+coupledb = db.couple
+karmadb = db.karma
+
+matadb = db.sangmata
+history_db = db.name_history
+
+wlcm = db.welc
+impdb = db.impdb
+jreq = db.jreq
+afkdb = db.afk
 
 # COUPLE DATABASE
 async def _get_lovers(cid: int):
