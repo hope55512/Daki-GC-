@@ -13,7 +13,7 @@ from pyrogram.enums import *
 
 #BOT FILE NAME
 from Exon import Abishnoi as app
-from  Exon.modules.no_sql.couples_db import _get_image, get_couple, save_couple
+from Exon.modules.no_sql.couples_db import _get_image, get_couple, save_couple
 
 def dt():
     now = datetime.now()
@@ -35,7 +35,7 @@ def dt_tom():
 tomorrow = str(dt_tom())
 today = str(dt()[0])
 
-@app.on_message(filters.command(["couples","couple","shipping"]))
+@app.on_message(filters.command(["couple","couples","shipping"]))
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
@@ -66,16 +66,16 @@ async def ctest(_, message):
          try:
             p1 = await app.download_media(photo1.big_file_id, file_name="pfp.png")
          except Exception:
-            p1 = "Exon/resources/profilepic.jpg"
+            p1 = "Exon/resourcs/profilepic.jpg"
          try:
             p2 = await app.download_media(photo2.big_file_id, file_name="pfp1.png")
          except Exception:
-            p2 = "Exon/resources/profilepic.jpg"
+            p2 = "Exon/resourcs/profilepic.jpg"
             
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("Exon/resources/a.png")
+         img = Image.open("Exon/resourcs/a.png")
 
          img1 = img1.resize((320,320))
          img2 = img2.resize((320,320))
@@ -100,11 +100,11 @@ async def ctest(_, message):
          img.save(f'test_{cid}.png')
     
          TXT = f"""
-**TODAY'S SELECTED COUPLES 🎉 :
-➖➖➖➖➖➖➖➖➖➖➖➖
+**💌 ᴄᴏᴜᴘʟᴇs ᴏғ ᴛʜᴇ ᴅᴀʏ :
+━━━━━━━━━━━━━━━━━━━
 {N1} + {N2} = ❣️
-➖➖➖➖➖➖➖➖➖➖➖➖
-NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
+━━━━━━━━━━━━━━━━━━━
+ɴᴇᴡ ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ ᴄᴀɴ ʙᴇ ᴄʜᴏsᴇɴ ᴀᴛ {tomorrow} !!**
 """
     
          await message.reply_photo(f"test_{cid}.png", caption=TXT)
@@ -125,11 +125,11 @@ NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
          c2_name = (await app.get_users(c2_id)).first_name
          
          TXT = f"""
-**TODAY'S SELECTED COUPLES 🎉 :
-➖➖➖➖➖➖➖➖➖➖➖➖
+**💌 ᴄᴏᴜᴘʟᴇs ᴏғ ᴛʜᴇ ᴅᴀʏ  :
+━━━━━━━━━━━━━━━━━━━
 [{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❣️
-➖➖➖➖➖➖➖➖➖➖➖➖
-NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
+━━━━━━━━━━━━━━━━━━━
+ɴᴇᴡ ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ ᴄᴀɴ ʙᴇ ᴄʜᴏsᴇɴ ᴀᴛ {tomorrow} !!**
 """
          await message.reply_photo(b, caption=TXT)
          await msg.delete()
@@ -143,7 +143,12 @@ NEXT COUPLES WILL BE SELECTED ON {tomorrow} !!**
        pass
          
 
-__mod__ = "COUPLES"
 __help__ = """
-**» /couples** - Get Todays Couples Of The Group In Interactive View
+──「 Cᴏᴜᴘʟᴇ 」──
+
+Choose couples in your chat
+
+ ➢ /couple *:* Choose 2 users and send their name as couples in your chat.
 """
+
+__mod_name__ = "Cᴏᴜᴘʟᴇ"

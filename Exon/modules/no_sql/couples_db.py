@@ -1,6 +1,6 @@
-from . import AsuXdb as db
+from . import AsuXdb
 
-coupledb = db.couple
+coupledb = AsuXdb.couple
 
 async def _get_lovers(cid: int):
     lovers = await coupledb.find_one({"chat_id": cid})
