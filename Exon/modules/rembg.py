@@ -72,10 +72,10 @@ async def _(event):
         end = datetime.now()
         ms = (end - start).seconds
         await event.reply("Background Removed in {} seconds".format(ms))
-        a.delete()
+        await a.delete()
     else:
         await event.reply(
-            "remove.bg API returned Errors. Please report to @kenbotsupport\n`{}".format(
+            "remove.bg API returned Errors. Please report to @botsupportx\n`{}".format(
                 output_file_name.content.decode("UTF-8")
             )
         )
