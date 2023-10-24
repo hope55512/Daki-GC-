@@ -385,8 +385,8 @@ def help_button(update: Update, context: CallbackContext):
             )
             help_buttons.append(
                 [
-                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="ABG_support"),
+                    InlineKeyboardButton(text="⤾ Bᴀᴄᴋ", callback_data="help_back"),
+                    InlineKeyboardButton(text="🏥 sᴜᴘᴘᴏʀᴛ",url=f"https://t.me/{SUPPORT_CHAT}"),
                 ]
             )
             query.message.edit_text(
@@ -513,8 +513,8 @@ def get_help(update: Update, context: CallbackContext):
             )
             help_buttons.append(
                 [
-                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="ABG_support"),
+                    InlineKeyboardButton(text="⤾ Bᴀᴄᴋ", callback_data="help_back"),
+                    InlineKeyboardButton(text="🏥 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
                 ]
             )
             send_help(
@@ -774,7 +774,7 @@ def main():
 
 
 if __name__ == "__main__":
-    log.info("[ᴇxᴏɴ] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
+    log.info("[Hᴏꜱʜɪɴᴏ] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
