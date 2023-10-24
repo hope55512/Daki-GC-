@@ -2,34 +2,7 @@ from typing import Dict, Union
 
 from . import AsuXdb as db
 
-couplesdb = db.couple
 karmadb = db.karma
-
-
-async def _get_lovers(chat_id: int):
-    lovers = couplesdb.find_one({"chat_id": chat_id})
-    if lovers:
-        lovers = lovers["couple"]
-    else:
-        lovers = {}
-    return lovers
-
-
-async def get_couple(chat_id: int, date: str):
-    lovers = await _get_lovers(chat_id)
-    if date in lovers:
-        return lovers[date]
-    else:
-        return False
-
-
-async def save_couple(chat_id: int, date: str, couple: dict):
-    lovers = await _get_lovers(chat_id)
-    lovers[date] = couple
-    couplesdb.update_one(
-        {"chat_id": chat_id}, {"$set": {"couple": lovers}}, upsert=True
-    )
-
 
 async def get_karmas_count() -> dict:
     chats = karmadb.find({"chat_id": {"$lt": 0}})
