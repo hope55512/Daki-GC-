@@ -5,7 +5,7 @@ from Exon import DB_NAME
 from Exon import MONGO_URI as MONGO_DB_URI
 
 mongo = MongoCli(MONGO_DB_URI)
-Asudb = mongo.ExonRobot_
+Asudb = mongo.HoshinoBotV3
 
 try:
     client = MongoClient(MONGO_DB_URI)

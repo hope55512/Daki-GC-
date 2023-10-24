@@ -10,7 +10,7 @@ from Exon.utils.mongo import (
     impo_off,
 )
 from Exon import Abishnoi as app
-from Exon.modules.helper_funcs.chat_status import user_admin
+from Exon.modules.helper_funcs.status import user_admin
 
 
 @app.on_message(filters.group & ~filters.bot & ~filters.via_bot, group=1)
