@@ -1,7 +1,7 @@
 import requests
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from Hoshino import pbot as app
+from Exon import Abishnoi as app
 import httpx
 
 @app.on_message(filters.command("bard"))

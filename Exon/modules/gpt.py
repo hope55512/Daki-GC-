@@ -1,4 +1,4 @@
-from Hoshino import pbot as app
+from Exon import Abishnoi as app
 import requests
 from pyrogram import *
 
