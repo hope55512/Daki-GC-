@@ -23,10 +23,10 @@ def chat_join_req(upd: Update, ctx: CallbackContext):
         [
             [
                 InlineKeyboardButton(
-                    "ᴀᴘᴘʀᴏᴠᴇ", callback_data="cb_approve={}".format(user.id)
+                    "Aᴘᴘʀᴏᴠᴇ ✅", callback_data="cb_approve={}".format(user.id)
                 ),
                 InlineKeyboardButton(
-                    "ᴅᴇᴄʟɪɴᴇ", callback_data="cb_decline={}".format(user.id)
+                    "Dᴇᴄʟɪɴᴇ ❌", callback_data="cb_decline={}".format(user.id)
                 ),
             ]
         ]
