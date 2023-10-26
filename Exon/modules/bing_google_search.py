@@ -87,7 +87,7 @@ Tʜᴇ ᴍᴏᴅᴜʟᴇ ᴛʜᴀᴛ ʜᴇʟᴘ ʏᴏᴜ ꜱᴇᴀʀᴄʜ ᴀɴ�
  ➢ /wiki*:* ᴛ ᴛᴏ ꜱᴇᴀʀᴄʜ Qᴜᴇʀʏ ᴏɴ ᴡɪᴋɪᴘᴇᴅɪᴀ
 """
 
-__mod_name__ = "Sᴇᴀʀᴄʜ"
+__mod_name__ = "Sᴇᴀʀᴄʜ 🔎"
 
 from Exon.modules.language import gs
 
