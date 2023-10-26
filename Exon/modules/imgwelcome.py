@@ -42,11 +42,11 @@ def welcomepic(pic, user, chat, id,uname):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=40)
     welcome_font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
-    draw.text((30, 300), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
-    draw.text((30, 370), f'ID: {id}', fill=(255, 255, 255), font=font)
-    draw.text((30, 40), f"{unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
+    draw.text((30, 600), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
+    # draw.text((30, 670), f'ID: {id}', fill=(255, 255, 255), font=font)
+    draw.text((30, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
     # draw.text((30,430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
-    pfp_position = (120, 80)
+    pfp_position = (180, 120)
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
