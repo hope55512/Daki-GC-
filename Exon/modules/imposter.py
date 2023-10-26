@@ -126,7 +126,7 @@ def get_help(chat):
     return gs(chat, "imposter_help")
 
 
-__mod_name__ = "Iᴍᴘᴏꜱᴛᴇʀ"
+__mod_name__ = "Iᴍᴘᴏꜱᴛᴇʀ ⚠️"
 __help__ = """
 ──「 Iᴍᴘᴏꜱᴛᴇʀ 」──
 
