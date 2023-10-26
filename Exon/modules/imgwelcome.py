@@ -32,7 +32,7 @@ def circle(pfp, size=(500, 500)):
     pfp.putalpha(mask)
     return pfp
 
-def welcomepic(pic, user, chat, id):
+def welcomepic(pic, user, chat, id,uname):
     background = Image.open("Exon/resources/bg.jpg")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
