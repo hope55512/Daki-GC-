@@ -141,6 +141,23 @@ def ABG_about_callback(update, context):
                 [[InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ", callback_data="ABG_")]]
             ),
         )
+    elif query.data == "ABG_ai":
+        query.message.edit_text(
+            text=f"<b>๏ AI Fᴇᴀᴛᴜʀᴇꜱ  Oꜰ Aɪ Hᴏꜱʜɪɴᴏ</b>"
+            f"➢ /ask , /chat*:* ᴛᴏ ɢᴇᴛ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛꜱ ꜰʀᴏᴍ Cʜᴀᴛ Gᴘᴛ."
+
+            f"➢ /bard*:* ᴛᴏ ɢᴇᴛ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛꜱ ꜰʀᴏᴍ Bᴀʀᴅ Aɪ."
+
+            f"➢ /rmbg*:* ᴛᴏ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ᴏꜰ ᴛʜᴇ ᴀɴʏ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ."
+
+            f"➢ /upscale*:* Tᴏ ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ Qᴜᴀʟɪᴛʏ ᴏꜰ ᴀɴ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ."
+
+            f"➢ /imagine , /draw*:* ɢᴇᴛ ᴛʜᴇ Aɪ ɢᴇɴᴇʀᴀᴛᴇᴅ ɪᴍᴀɢᴇꜱ ʙʏ ᴘʀᴏᴠɪᴅɪɴɢ ᴛʜᴇ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ",
+            parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Gᴏ Bᴀᴄᴋ", callback_data="ABG_")]]
+            ),
+        )
     elif query.data == "ABG_support":
         query.message.edit_text(
             text=f"*๏ {BOT_NAME} sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛs*"

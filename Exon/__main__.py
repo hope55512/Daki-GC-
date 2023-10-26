@@ -75,7 +75,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="📑Aʙᴏᴜᴛ", callback_data="ABG_"),
-        InlineKeyboardButton(text="Aɪ 🤖", callback_data="ABG_"),
+        InlineKeyboardButton(text="Aɪ 🤖", callback_data="ABG_ai"),
         # InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
     ],
     [
