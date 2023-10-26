@@ -1,7 +1,7 @@
 from telethon import TelegramClient, events
 from bs4 import BeautifulSoup
 import requests
-from exon import telethn as client 
+from Exon import telethn as client 
 
 @client.on(events.NewMessage(pattern='/grs|/reverse|/pp|/p|/P'))
 async def reverse(event):
