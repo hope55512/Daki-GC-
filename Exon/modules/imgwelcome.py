@@ -146,7 +146,7 @@ UsᴇʀNᴀᴍᴇ: @{message.chat.username}
 ───────────────────**
 """)
 
-__mod_name__ = "Sᴡᴇʟᴄᴏᴍᴇ"
+__mod_name__ = "kuchHai"
 
 __help__ = """
 ──「 Sᴡᴇʟᴄᴏᴍᴇ 」──
