@@ -40,7 +40,7 @@ def welcomepic(pic, user, chat, id,uname):
         (400, 400)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=40)
+    font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
     welcome_font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
     draw.text((50, 600), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
     # draw.text((30, 670), f'ID: {id}', fill=(255, 255, 255), font=font)
