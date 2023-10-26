@@ -44,7 +44,7 @@ def welcomepic(pic, user, chat, id,uname):
     welcome_font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
     draw.text((50, 600), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
     # draw.text((30, 670), f'ID: {id}', fill=(255, 255, 255), font=font)
-    draw.text((40, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
+    draw.text((80, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
     # draw.text((30,430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
     pfp_position = (180, 140)
     background.paste(pfp, pfp_position, pfp)  
