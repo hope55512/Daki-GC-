@@ -1,31 +1,4 @@
-"""
-MIT License
 
-Copyright (c) 2022 ABISHNOI69
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
-# ""DEAR PRO PEOPLE,  DON'T REMOVE & CHANGE THIS LINE
-# TG :- @Abishnoi1m
-#     UPDATE   :- Abishnoi_bots
-#     GITHUB :- ABISHNOI69 ""
 
 from pyrogram.types import CallbackQuery
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
@@ -143,19 +116,22 @@ def ABG_about_callback(update, context):
         )
     elif query.data == "ABG_ai":
         query.message.edit_text(
-            text=f"<b>๏ AI Fᴇᴀᴛᴜʀᴇꜱ  Oꜰ Aɪ Hᴏꜱʜɪɴᴏ</b>"
-            f"➢ /ask , /chat*:* ᴛᴏ ɢᴇᴛ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛꜱ ꜰʀᴏᴍ Cʜᴀᴛ Gᴘᴛ."
+            text=f"""
+Hᴇʀᴇ Aʀᴇ Tʜᴇ Aɪ Mᴏᴅᴜʟᴇꜱ Lɪꜱᴛ Aᴠᴀɪʟᴀʙʟᴇ Iɴ Aɪ Hᴏꜱʜɪɴᴏ
 
-            f"➢ /bard*:* ᴛᴏ ɢᴇᴛ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛꜱ ꜰʀᴏᴍ Bᴀʀᴅ Aɪ."
+    ➢ /ask , /chat*:* ᴛᴏ ɢᴇᴛ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛꜱ ꜰʀᴏᴍ Cʜᴀᴛ Gᴘᴛ.
 
-            f"➢ /rmbg*:* ᴛᴏ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ᴏꜰ ᴛʜᴇ ᴀɴʏ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ."
+    ➢ /bard*:* ᴛᴏ ɢᴇᴛ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛꜱ ꜰʀᴏᴍ Bᴀʀᴅ Aɪ.
 
-            f"➢ /upscale*:* Tᴏ ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ Qᴜᴀʟɪᴛʏ ᴏꜰ ᴀɴ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ."
+    ➢ /rmbg*:* ᴛᴏ ʀᴇᴍᴏᴠᴇ ʙᴀᴄᴋɢʀᴏᴜɴᴅ ᴏꜰ ᴛʜᴇ ᴀɴʏ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ.
 
-            f"➢ /imagine , /draw*:* ɢᴇᴛ ᴛʜᴇ Aɪ ɢᴇɴᴇʀᴀᴛᴇᴅ ɪᴍᴀɢᴇꜱ ʙʏ ᴘʀᴏᴠɪᴅɪɴɢ ᴛʜᴇ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ",
+    ➢ /upscale*:* Tᴏ ɪɴᴄʀᴇᴀꜱᴇꜱ ᴛʜᴇ Qᴜᴀʟɪᴛʏ ᴏꜰ ᴀɴ ɪᴍᴀɢᴇ ᴛʜʀᴏᴜɢʜ Aɪ.
+
+    ➢ /imagine , /draw*:* ɢᴇᴛ ᴛʜᴇ Aɪ ɢᴇɴᴇʀᴀᴛᴇᴅ ɪᴍᴀɢᴇꜱ ʙʏ ᴘʀᴏᴠɪᴅɪɴɢ ᴛʜᴇ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ
+""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Gᴏ Bᴀᴄᴋ", callback_data="ABG_")]]
+                [[InlineKeyboardButton(text="Gᴏ Bᴀᴄᴋ", callback_data="start_back")]]
             ),
         )
     elif query.data == "ABG_support":
