@@ -5,7 +5,7 @@ from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
 
-from Exon import Abishnoi as app, EVENT_LOGS as LOG_CHANNEL_ID
+from Exon import Abishnoi as app, EVENT_LOGS as LOG_CHANNEL_ID,BOT_USERNAME
 from Exon.utils.mongo import add_wlcm, rm_wlcm , wlcm
 
 
@@ -117,11 +117,14 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
-───────────────────
+𝗛𝗲𝗹𝗹𝗼 [{user.mention}](t.me/{user.username}) 𝗯𝗮𝗯𝘆😜 , 𝗪𝗲𝗹𝗰𝗼𝗺𝗲
+▰▱▰▱▰▱▰▱▰▱▰▱▰
+
 Nᴀᴍᴇ: {user.mention}
 Iᴅ: {user.id}
 UsᴇʀNᴀᴍᴇ: @{user.username}
-───────────────────**
+─────────────────────
+By: @{BOT_USERNAME}
 """,
             )
     except Exception as e:
