@@ -42,7 +42,7 @@ def welcomepic(pic, user, chat, id,uname):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
     welcome_font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
-    draw.text((50, 600), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
+    draw.text((52, 700), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
     # draw.text((30, 670), f'ID: {id}', fill=(255, 255, 255), font=font)
     draw.text((80, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
     # draw.text((30,430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
@@ -117,14 +117,13 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
-𝗛𝗲𝗹𝗹𝗼 *{user.mention}* 𝗯𝗮𝗯𝘆😜 , 𝗪𝗲𝗹𝗰𝗼𝗺𝗲
+𝗛𝗲𝗹𝗹𝗼 {user.mention} 𝗯𝗮𝗯𝘆😜 , 𝗪𝗲𝗹𝗰𝗼𝗺𝗲
 ▰▱▰▱▰▱▰▱▰▱▰▱▰
 
-Nᴀᴍᴇ: {user.mention}
-Iᴅ: {user.id}
-UsᴇʀNᴀᴍᴇ: @{user.username}
-─────────────────────
-By: @{BOT_USERNAME}
+*Nᴀᴍᴇ:* {user.mention}
+*Iᴅ:* {user.id}
+▰▱▰▱▰▱▰▱▰▱▰▱▰
+*By:* @{BOT_USERNAME}
 """,
             )
     except Exception as e:
@@ -149,7 +148,7 @@ UsᴇʀNᴀᴍᴇ: @{message.chat.username}
 ───────────────────**
 """)
 
-__mod_name__ = "kuchHai"
+__mod_name__ = "Sᴡᴇʟᴄᴏᴍᴇ"
 
 __help__ = """
 ──「 Sᴡᴇʟᴄᴏᴍᴇ 」──
