@@ -1,6 +1,6 @@
 
 {
-    "name": "Hᴏꜱʜɪɴᴏᴏʙᴏᴛ",
+    "name": "Hᴏꜱʜɪɴᴏ ʙᴏᴛ V3",
     "description": "Telegram Group Management Bot Written In Python Using python-telegram-bot.",
     "repository": "https://github.com/Abishnoi69/ExonRobot",
     "logo": "https://te.legra.ph/file/b0e09aabe796209f01d3d.jpg",
@@ -8,7 +8,6 @@
     "python3",
     "telegram",
     "bot",
-    "ExonRobot",
     "telegram-bot",
     "management",
     "ptb",

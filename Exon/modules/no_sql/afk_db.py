@@ -1,7 +1,7 @@
 from Exon.modules.no_sql import Asudb
 
 afkdb = Asudb.afk
-
+ 
 
 async def is_afk(user_id: int) -> bool:
     user = await afkdb.find_one({"user_id": user_id})

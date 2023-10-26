@@ -89,6 +89,7 @@ UPDATE_CHAT = Config.UPDATE_CHAT
 MONGO_DB = "Exon"  # DON'T EDIT
 MONGO_PORT = "27017"  # DON'T EDIT
 MONGO_URI = Config.MONGO_URI
+REDIS_URL = Config.REDIS_URL
 DB_NAME = Config.DB_NAME
 BOT_API_URL = "https://api.telegram.org/bot"  # DON'T EDIT
 DB_URL = Config.DATABASE_URL
@@ -121,6 +122,19 @@ BACKUP_PASS = 1
 WHITELIST_CHATS = []
 BL_CHATS = []
 SPAMMERS = []
+
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+
+try:
+    REDIS.ping()
+    LOGGER.info("ʏᴏᴜʀ ʀᴇᴅɪs sᴇʀᴠᴇʀ ɪs ɴᴏᴡ ᴀʟɪᴠᴇ !")
+
+except BaseException:
+    raise Exception("ʏᴏᴜʀ ʀᴇᴅɪs server ɪs ɴᴏᴛ ᴀʟɪᴠᴇ, ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ᴀɢᴀɪɴ.")
+
+finally:
+    REDIS.ping()
+    LOGGER.info("ʏᴏᴜʀ ʀᴇᴅɪs sᴇʀᴠᴇʀ ɪs ɴᴏᴡ ᴀʟɪᴠᴇ ɴɪᴄᴇ !")
 
 if not SPAMWATCH_API:
     sw = None
@@ -210,6 +224,7 @@ DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
+
 
 
 # ʙᴏᴛ ɪɴғᴏ
