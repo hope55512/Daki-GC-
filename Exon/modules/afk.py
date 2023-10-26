@@ -31,6 +31,9 @@ def afk(update, context):
     REDIS.set(f"afk_time_{update.effective_user.id}", start_afk_time)
     fname = update.effective_user.first_name
     try:
+        update.effective_message.reply_sticker(
+        "CAACAgIAAx0CcIkIWQAClpVlM4P2LGGQ6DJREo1_WOYlYY4YbgACXy0AAjhX-Ul8aTPAtbi5uTAE"
+    )
         update.effective_message.reply_text("{} ɪs ɴᴏᴡ ᴀᴡᴀʏ!".format(fname))
     except BadRequest:
         pass
