@@ -33,7 +33,7 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chat, id,uname):
-    background = Image.open("Exon/resources/bg2.jpg")
+    background = Image.open("Exon/resources/bg3.jpg")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
