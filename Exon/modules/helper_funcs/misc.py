@@ -252,3 +252,12 @@ def upload_text(data: str) -> typing.Optional[str]:
     url = list(urlparse(urljoin("https://bin.nixnet.services", data["url"])))
     url[5] = base58.b58encode(passphrase).decode()
     return urlunparse(url)
+
+ImageModels = {
+    "Meina Mix":2,
+    "Cetus Mix":10,
+    "DarkSushiMix":9,
+    "DarkSushiMix V2":14,
+    "Absolute Reality":13,
+    "CreativeV2":12,
+}

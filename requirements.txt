@@ -15,6 +15,7 @@ future==0.18.3
 git+https://github.com/python-telegram-bot/ptbcontrib.git
 gitpython==3.1.31
 hachoir==3.2.0
+lexica-api
 markdown2==2.4.10
 multicolorcaptcha==1.2.0
 pillow==9.4.0
