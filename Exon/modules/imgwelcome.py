@@ -33,11 +33,11 @@ def circle(pfp, size=(500, 500)):
     return pfp
 
 def welcomepic(pic, user, chat, id,uname):
-    background = Image.open("Exon/resources/bg.jpg")
+    background = Image.open("Exon/resources/bg2.jpg")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
-        (500, 500)
+        (400, 400)
     ) 
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=40)
@@ -46,7 +46,7 @@ def welcomepic(pic, user, chat, id,uname):
     draw.text((30, 370), f'ID: {id}', fill=(255, 255, 255), font=font)
     draw.text((30, 40), f"{unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
     # draw.text((30,430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
-    pfp_position = (200, 140)
+    pfp_position = (120, 80)
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
