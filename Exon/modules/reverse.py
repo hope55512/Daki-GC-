@@ -1,13 +1,13 @@
 from telethon import TelegramClient, events
 from bs4 import BeautifulSoup
 import requests
-from Exon import telethn as client 
+from Exon import telethn as client
 
 @client.on(events.NewMessage(pattern='/grs|/reverse|/pp|/p|/P'))
 async def reverse(event):
     if not event.is_reply:
         await event.respond("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
-    elif event.reply_to_msg.media:
+    elif event.reply_to_msg and event.reply_to_msg.media:
         msg = await event.respond("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ɪᴍᴀɢᴇ.....")
         file = await event.reply_to_msg.download_media(file='image.jpg')
         result = reverse_image_search(file)
@@ -35,5 +35,4 @@ def reverse_image_search(image_path):
             link = anchor['href']
             return {'title': title, 'link': link}
     return None
-
 
