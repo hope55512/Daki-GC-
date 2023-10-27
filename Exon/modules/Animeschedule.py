@@ -1,6 +1,6 @@
 from pyrogram import filters, types
 import requests
-from Exon import pbot
+from Exon import Abishnoi as pbot
 
 # Define a global variable to store the schedule text
 schedule_text = ""
