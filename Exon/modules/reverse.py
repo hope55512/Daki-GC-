@@ -38,6 +38,8 @@ async def reverse_image_search(image_url):
                 return details
             else:
                 return ["No results found."]
+        elif response.status_code == 403:
+            return ["Error: Forbidden - Check your API key, IP whitelisting, or rate limiting."]
         else:
             return [f"Error: SauceNao API returned status code {response.status_code}."]
     except Exception as e:
@@ -46,7 +48,7 @@ async def reverse_image_search(image_url):
 @app.on_message(filters.command(['grs', 'reverse', 'pp', 'p', 'P']))
 async def reverse_image_search_command(client, message):
     if not message.reply_to_message:
-        await message.reply("ʀᴇᴘʟʏ ᴛо ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
+        await message.reply("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
         return
 
     if message.reply_to_message.photo:
