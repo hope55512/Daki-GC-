@@ -399,9 +399,16 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs:</b>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n" + "\n".join([mod.__stats__() for mod in STATS])
-    result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    update.effective_message.reply_text(result)
+    update.effective_message.reply_text(
+             "\n*ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs*:\n"
+            + "\n".join([mod.__stats__() for mod in STATS])
+            + "\n\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/botupdatex) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/botsupportx) \n\n"
+            + f"『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Kira](t.me/SIAmKira)  』\n",
+
+
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
 
 
 def about_bio(update: Update, context: CallbackContext):
