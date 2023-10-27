@@ -268,10 +268,10 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
 
         else:
             first_name = update.effective_user.first_name
-            usr = update.effective_user
-            lol = update.effective_message.reply_text(
-                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
-            )
+            # usr = update.effective_user
+            # lol = update.effective_message.reply_text(
+            #     PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
+            # )
 
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
