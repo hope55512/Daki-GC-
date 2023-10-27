@@ -179,7 +179,7 @@ def listmodules(update: Update, context: CallbackContext):
     message.reply_text(module_list, parse_mode=ParseMode.HTML)
 
 
-__mod_name__ = "Mᴏᴅᴜʟᴇs"
+__mod_name__ = "Mᴏᴅᴜʟᴇs 🧾"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
