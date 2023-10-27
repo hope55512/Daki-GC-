@@ -70,3 +70,10 @@ Hᴇʀᴇ Aʀᴇ Tʜᴇ Aɪ Mᴏᴅᴜʟᴇꜱ Lɪꜱᴛ Aᴠᴀɪʟᴀʙʟᴇ I
     ➢ /imagine , /draw*:* ɢᴇᴛ ᴛʜᴇ Aɪ ɢᴇɴᴇʀᴀᴛᴇᴅ ɪᴍᴀɢᴇꜱ ʙʏ ᴘʀᴏᴠɪᴅɪɴɢ ᴛʜᴇ ᴅᴇꜱᴄʀɪᴘᴛɪᴏɴ
 """
 
+
+from Exon.modules.language import gs
+
+
+def get_help(chat):
+    return gs(chat, "ai_help")
+
