@@ -1,22 +1,45 @@
 from pyrogram import Client, filters
-from AIOSauceNao import AIOSauceNao
+import requests
 from Exon import Abishnoi as app
+from bs4 import BeautifulSoup
 
-# Replace 'YOUR_SAUCENAO_API_KEY' with the provided API key
+# Replace 'YOUR_SAUCENAO_API_KEY' with the provided SauceNao API key
 SAUCENAO_API_KEY = '077f16b38a2452401790540f41246c7d951330c0'
 
 async def reverse_image_search(image_url):
-    # Initialize AIOSauceNao with the API key
-    async with AIOSauceNao(SAUCENAO_API_KEY) as aio:
-        results = await aio.from_url(image_url)
-        # Process and format the results as needed
-        details = []
-        for result in results:
-            if result.characters and result.material:
-                character_names = ", ".join(result.characters)
-                anime_name = result.material[0].title
-                details.append(f"Character(s): {character_names}\nAnime: {anime_name}")
-        return details
+    saucenao_url = "https://saucenao.com/search.php"
+    params = {
+        "db": 999,  # 999 is the "All" database in SauceNao
+        "output_type": 2,  # JSON output
+        "testmode": 0,  # Production mode
+        "numres": 16,  # Maximum number of results
+        "url": image_url,
+        "api_key": SAUCENAO_API_KEY,
+    }
+    
+    try:
+        response = requests.get(saucenao_url, params=params)
+
+        if response.status_code == 200:
+            result = response.json()
+            if 'results' in result:
+                results = result['results']
+                details = []
+                for res in results:
+                    data = res['data']
+                    if 'characters' in data and 'material' in data:
+                        characters = data['characters']
+                        material = data['material']
+                        character_names = ", ".join(characters)
+                        anime_name = material[0]['title']
+                        details.append(f"Character(s): {character_names}\nAnime: {anime_name}")
+                return details
+            else:
+                return ["No results found."]
+        else:
+            return [f"Error: SauceNao API returned status code {response.status_code}."]
+    except Exception as e:
+        return [f"Error: {str(e)}"]
 
 @app.on_message(filters.command(['grs', 'reverse', 'pp', 'p', 'P']))
 async def reverse_image_search_command(client, message):
@@ -41,3 +64,5 @@ async def reverse_image_search_command(client, message):
         for detail in results:
             await message.reply(detail)
         await msg.delete()
+
+
