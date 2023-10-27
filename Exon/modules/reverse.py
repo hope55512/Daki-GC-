@@ -11,7 +11,7 @@ async def reverse_image_search(client, message):
 
     if message.reply_to_message.photo:
         msg = await message.reply("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ɪᴍᴀɢᴇ.....")
-        photo = message.reply_to_message.photo[-1]
+        photo = message.reply_to_message.photo
         file_id = photo.file_id
         file_path = await client.download_media(file_id)
         result = reverse_image_search(file_path)
@@ -51,4 +51,3 @@ def reverse_image_search(image_path):
             link = anchor['href']
             return {'title': title, 'link': link}
     return None
-
