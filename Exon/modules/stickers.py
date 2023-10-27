@@ -22,7 +22,7 @@ from Exon import dispatcher
 from Exon import telethn as bot
 from Exon.events import register as asau
 from Exon.modules.disable import DisableAbleCommandHandler
-from Helper.covert import convert_gif
+from Exon.Helper.covert import convert_gif
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
