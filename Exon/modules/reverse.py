@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from AIOSauceNao import AIOSauceNao
-from Exon import Abhisnoi as app
+from Exon import Abishnoi as app
 
 # Replace 'YOUR_SAUCENAO_API_KEY' with the provided API key
 SAUCENAO_API_KEY = '077f16b38a2452401790540f41246c7d951330c0'
