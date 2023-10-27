@@ -5,9 +5,9 @@ import urllib.parse
 import urllib.request
 import requests
 from bs4 import BeautifulSoup
-from telegram import InputMediaPhoto
+from telegram import InputMediaPhoto, Update
 from telegram.error import TelegramError
-from telegram.ext import CallbackContext, CommandHandler, run_async, Update
+from telegram.ext import CallbackContext, CommandHandler, run_async
 from Exon import dispatcher
 
 
