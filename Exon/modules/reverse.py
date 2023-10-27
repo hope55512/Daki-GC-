@@ -1,23 +1,39 @@
-from telethon import TelegramClient, events
+from pyrogram import Client, filters
 from bs4 import BeautifulSoup
 import requests
-from Exon import telethn as client
+from Exon import Abishnoi as app
 
-@client.on(events.NewMessage(pattern='/grs|/reverse|/pp|/p|/P'))
-async def reverse(event):
-    if not event.is_reply:
-        await event.respond("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
-    elif event.reply_to_msg and event.reply_to_msg.media:
-        msg = await event.respond("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ɪᴍᴀɢᴇ.....")
-        file = await event.reply_to_msg.download_media(file='image.jpg')
-        result = reverse_image_search(file)
+@app.on_message(filters.command(['grs', 'reverse', 'pp', 'p', 'P']))
+async def reverse_image_search(client, message):
+    if not message.reply_to_message:
+        await message.reply("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
+        return
+
+    if message.reply_to_message.photo:
+        msg = await message.reply("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ɪᴍᴀɢᴇ.....")
+        photo = message.reply_to_message.photo[-1]
+        file_id = photo.file_id
+        file_path = await client.download_media(file_id)
+        result = reverse_image_search(file_path)
         if result:
-            await event.respond(f"[{result['title']}]({result['link']})", link_preview=False, parse_mode='markdown')
+            caption = f"[{result['title']}]({result['link']})"
+            await client.send_photo(chat_id=message.chat.id, photo=file_path, caption=caption, parse_mode='markdown')
         else:
-            await event.respond("No results found.")
+            await message.reply("No results found.")
         await msg.delete()
-    else:
-        await event.respond("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
+
+    elif message.reply_to_message.sticker:
+        msg = await message.reply("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ sᴛɪᴄᴋᴇʀ.....")
+        sticker = message.reply_to_message.sticker
+        file_id = sticker.file_id
+        file_path = await client.download_media(file_id)
+        result = reverse_image_search(file_path)
+        if result:
+            caption = f"[{result['title']}]({result['link']})"
+            await client.send_sticker(chat_id=message.chat.id, sticker=file_path, caption=caption, parse_mode='markdown')
+        else:
+            await message.reply("No results found.")
+        await msg.delete()
 
 def reverse_image_search(image_path):
     search_url = "https://www.google.com/searchbyimage"
