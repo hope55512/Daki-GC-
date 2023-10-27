@@ -12,32 +12,27 @@ set_chat_lang: "ɢʀᴇᴀᴛ, {} ɪᴛ ɪs ( ғʀᴏᴍ ɴᴏᴡ ᴏɴ!"
 
 
 pm_start_text: |
-   [ㅤ](https://telegra.ph/file/b7df5272624f0b7798dcf.mp4)
-   *ʜᴇʏ* {} ✨,
+   [ㅤ](https://telegra.ph/file/ea772da01836022199827.jpg)
 
-   *๏ ɪ ᴀᴍ*  {} !
+   Moshi Moshi {},⚜️
 
-   ■□■□■□■□■□■□■□■□■□■□■□
-   ➥ ɪ ᴀᴍ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟ ᴀɴᴅ ᴀᴅᴠᴀɴᴄᴇ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ꜱᴏᴍᴇ ᴀᴡᴇꜱᴏᴍᴇ ꜰᴇᴀᴛᴜʀᴇs.
-
-   ➥ ɪ ʜᴀᴠᴇ ᴀᴅᴠᴀɴᴄᴇ ꜱᴘᴀᴍ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ , ɪᴍᴘᴏꜱᴛᴇʀ ᴅᴇᴛᴇᴄᴛɪᴏɴ, ᴜɴɪQᴜᴇ ᴄᴏᴜᴘʟᴇ ᴍᴏᴅᴜʟᴇ, ᴡᴇʟᴄᴏᴍᴇ ᴍᴏᴅᴜʟᴇ ᴀɴᴅ ᴍᴀɴʏ ᴍᴏʀᴇ.ᴇɴᴊᴏʏ ʏᴏᴜʀsᴇʟꜰ
-
-   ─────────────────────
-
-   ❆ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.
+   I Am Your {}.
+   ▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱
+   🌌 Control Your Group Effortlessly.Type /help To Unveil Your Love.
+   Let's Bring Order To Your Group!.
 
 
 grp_start_text: "ʜɪ, ɪ'ᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ."
    
-   
-pm_help_text: |
-   » AI Hᴏsʜɪɴᴏ ᴇxᴄʟᴜsɪᴠᴇ Fᴇᴀᴛᴜʀᴇs
-   ㅤ [ ](https://te.legra.ph/file/7b94977d85a9fd152081a.jpg)
 
-   ➲ /start : Sᴛᴀʀᴛꜱ ᴍᴇ | ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍᴇ ʏᴏᴜ'ᴠᴇ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴᴇ ɪᴛ.
-   ➲ /help  : Aᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ ꜱᴇᴄᴛɪᴏɴ.
-   ‣ ɪɴ ᴘᴍ : ᴡɪʟʟ sᴇɴᴅ ʏᴏᴜ ʜᴇʟᴘ ꜰᴏʀ ᴀʟʟ sᴜᴘᴘᴏʀᴛᴇᴅ ᴍᴏᴅᴜʟᴇꜱ.
-   ‣ ɪɴ ɢʀᴏᴜᴘ : ᴡɪʟʟ ʀᴇᴅɪʀᴇᴄᴛ ʏᴏᴜ ᴛᴏ ᴘᴍ, ᴡɪᴛʜ ᴀʟʟ ᴛʜᴀᴛ ʜᴇʟᴘ ᴍᴏᴅᴜʟᴇs.
+pm_help_text: |
+   Main commands available:   (https://telegra.ph/file/ba4621f3251b3c8356adf.jpg)
+ 
+   ➛ /help: PM's you this message.  
+   ➛ /help <module name>: PM's you info about that module.
+   ➛ /settings:
+      ❂ in PM: will send you your settings for all supported modules.
+      ❂ in a group: will redirect you to pm, with all that chat's setting
 
 
 add_bot: "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ"
@@ -99,8 +94,8 @@ achannel_help: |
     ᴛɪʀᴇᴅ ᴏғ ᴛᴇʟᴇɢʀᴀᴍ's sᴛᴜᴘɪᴅɪᴛʏ? ᴡᴇʟʟ ʜᴇʀᴇ ʏᴏᴜ ɢᴏ
     *ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs:*
     ➢ /antichannel <on/off>: ʙᴀɴs ᴀɴᴅ ᴅᴇʟᴇᴛᴇs ᴀɴʏᴏɴᴇ ᴡʜᴏ ᴛʀɪᴇs ᴛᴏ ᴛᴀʟᴋ ᴀs ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ғᴏʀᴄᴇs ᴇᴍ ᴛᴏ ᴛᴀʟᴋ ᴀs ᴛʜᴇᴍsᴇʟᴠᴇs
-    ➢ /antilinkedchan <on/off>: ᴍᴀᴋᴇs Hᴏꜱʜɪɴᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ ᴘᴏsᴛs ғʀᴏᴍ ᴄʜᴀᴛʀᴏᴏᴍ
-    ➢ /antichannelpin <on/off>: ᴍᴀᴋᴇs Hᴏꜱʜɪɴᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴜɴᴘɪɴ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ ᴘᴏsᴛs ғʀᴏᴍ ᴄʜᴀᴛʀᴏᴏᴍ
+    ➢ /antilinkedchan <on/off>: ᴍᴀᴋᴇs Hinata ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ ᴘᴏsᴛs ғʀᴏᴍ ᴄʜᴀᴛʀᴏᴏᴍ
+    ➢ /antichannelpin <on/off>: ᴍᴀᴋᴇs Hinata ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴜɴᴘɪɴ ʟɪɴᴋᴇᴅ ᴄʜᴀɴɴᴇʟ ᴘᴏsᴛs ғʀᴏᴍ ᴄʜᴀᴛʀᴏᴏᴍ
 
  
 admin_help: |
@@ -451,7 +446,7 @@ gtranslate_help: |
 fsub_help: |
    *ғᴏʀᴄᴇ ꜱᴜʙꜱᴄʀɪʙᴇ:*
 
-   ➢ *Hᴏꜱʜɪɴᴏ ᴄᴀɴ ᴍᴜᴛᴇ ᴍᴇᴍʙᴇʀꜱ ᴡʜᴏ ᴀʀᴇ ɴᴏᴛ ꜱᴜʙꜱᴄʀɪʙᴇᴅ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴜɴᴛɪʟ ᴛʜᴇʏ ꜱᴜʙꜱᴄʀɪʙᴇ*
+   ➢ *Hinata ᴄᴀɴ ᴍᴜᴛᴇ ᴍᴇᴍʙᴇʀꜱ ᴡʜᴏ ᴀʀᴇ ɴᴏᴛ ꜱᴜʙꜱᴄʀɪʙᴇᴅ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴜɴᴛɪʟ ᴛʜᴇʏ ꜱᴜʙꜱᴄʀɪʙᴇ*
    ➢ ᴡʜᴇɴ ᴇɴᴀʙʟᴇᴅ ɪ ᴡɪʟʟ ᴍᴜᴛᴇ ᴜɴꜱᴜʙꜱᴄʀɪʙᴇᴅ ᴍᴇᴍʙᴇʀꜱ ᴀɴᴅ ꜱʜᴏᴡ ᴛʜᴇᴍ ᴀ ᴜɴᴍᴜᴛᴇ ʙᴜᴛᴛᴏɴ. ᴡʜᴇɴ ᴛʜᴇʏ ᴘʀᴇꜱꜱᴇᴅ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ɪ ᴡɪʟʟ ᴜɴᴍᴜᴛᴇ ᴛʜᴇᴍ
 
    ➢ *ꜱᴇᴛᴜᴘ*

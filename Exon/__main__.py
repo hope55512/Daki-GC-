@@ -70,28 +70,22 @@ PM_START_TEX = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="❣ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ❣︎", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="⚜️Add Hinata To Your Group⚜️", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
     ],
     [
-        InlineKeyboardButton(text="📑Aʙᴏᴜᴛ", callback_data="ABG_"),
-        InlineKeyboardButton(text="Aɪ 🤖", callback_data="ABG_ai"),
-        # InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
+        InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="📢 Update", url=f"https://t.me/{UPDATE_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text=f"ℹ Hᴇʟᴘ Aɴᴅ  Cᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
-        # InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
-    ],
+        InlineKeyboardButton(text=f"⛩Help & Commands⛩", callback_data="help_back"),
+    ]
 ]
 
 aliveBtns = [
     [
-        InlineKeyboardButton(text="🚑 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="📘 Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATE_CHAT}"),
-    ],
-    [
         InlineKeyboardButton(
-            text="+ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ +",
+            text="⚜️Add Hinata To Your Group⚜️",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
@@ -236,7 +230,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 elif isinstance(help_list, str):
                     help_text = help_list
                 text = (
-                    "ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ\n『 *{}* 』 ᴍᴏᴅᴜʟᴇ:\n\n".format(
+                    "ʜᴇʀᴇ ɪs ᴛʜᴇ ʜᴇʟᴘ ғᴏʀ ᴛʜᴇ\n *{}* ᴍᴏᴅᴜʟᴇ:\n\n".format(
                         HELPABLE[mod].__mod_name__
                     )
                     + help_text
@@ -278,19 +272,6 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             lol = update.effective_message.reply_text(
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
-            time.sleep(0.4)
-            lol.edit_text("❤️‍🔥")
-            time.sleep(0.5)
-            lol.edit_text("⚡")
-            time.sleep(0.3)
-            lol.edit_text("Sᴛᴀʀᴛɪɴɢ ʙᴀʙʏ... ")
-            time.sleep(0.4)
-            lol.delete()
-
-            stkr  = update.effective_message.reply_sticker(
-                random.choice(START_STIKERS),
-                timeout=60,
-            )
 
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
@@ -303,12 +284,10 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 disable_web_page_preview=False,
             )
 
-            time.sleep(4)
-            stkr.delete()
 
     else:
         update.effective_message.reply_photo(
-            random.choice(PHOTO),
+            "https://telegra.ph/file/be6f04b512ec26376d875.jpg",
             caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),reply_markup=InlineKeyboardMarkup(aliveBtns),
@@ -385,8 +364,8 @@ def help_button(update: Update, context: CallbackContext):
             )
             help_buttons.append(
                 [
-                    InlineKeyboardButton(text="⤾ Bᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="🏥 sᴜᴘᴘᴏʀᴛ",url=f"https://t.me/{SUPPORT_CHAT}"),
+                    InlineKeyboardButton(text="Back", callback_data="help_back"),
+                    InlineKeyboardButton(text="Support",url=f"https://t.me/{SUPPORT_CHAT}"),
                 ]
             )
             query.message.edit_text(
@@ -513,8 +492,8 @@ def get_help(update: Update, context: CallbackContext):
             )
             help_buttons.append(
                 [
-                    InlineKeyboardButton(text="⤾ Bᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="🏥 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+                    InlineKeyboardButton(text="Back", callback_data="help_back"),
+                    InlineKeyboardButton(text="Support", url=f"https://t.me/{SUPPORT_CHAT}"),
                 ]
             )
             send_help(
@@ -774,7 +753,7 @@ def main():
 
 
 if __name__ == "__main__":
-    log.info("[Hᴏꜱʜɪɴᴏ] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
+    log.info("[Hinata] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
