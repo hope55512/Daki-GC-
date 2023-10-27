@@ -1,10 +1,38 @@
 from pyrogram import Client, filters
-from bs4 import BeautifulSoup
 import requests
 from Exon import Abishnoi as app
 
+async def reverse_image_search(image_url):
+    saucenao_url = "https://saucenao.com/search.php"
+    params = {
+        "db": 999,  # 999 is the "All" database in SauceNao
+        "output_type": 2,  # JSON output
+        "testmode": 1,  # Test mode (remove this for production use)
+        "url": image_url,
+    }
+    response = requests.get(saucenao_url, params=params)
+
+    if response.status_code == 200:
+        result = response.json()
+        if 'results' in result:
+            results = result['results']
+            details = []
+            for res in results:
+                data = res['data']
+                if 'characters' in data and 'material' in data:
+                    characters = data['characters']
+                    material = data['material']
+                    character_names = ", ".join(characters)
+                    anime_name = material[0]['title']
+                    details.append(f"Character(s): {character_names}\nAnime: {anime_name}")
+            return details
+        else:
+            return "No results found."
+    else:
+        return "Error: Unable to perform reverse image search."
+
 @app.on_message(filters.command(['grs', 'reverse', 'pp', 'p', 'P']))
-async def reverse_image_search(client, message):
+async def reverse_image_search_command(client, message):
     if not message.reply_to_message:
         await message.reply("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ᴏʀ ᴀ sᴛɪᴄᴋᴇʀ.")
         return
@@ -12,42 +40,25 @@ async def reverse_image_search(client, message):
     if message.reply_to_message.photo:
         msg = await message.reply("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ɪᴍᴀɢᴇ.....")
         photo = message.reply_to_message.photo
-        file_id = photo.file_id
-        file_path = await client.download_media(file_id)
-        result = reverse_image_search(file_path)
-        if result:
-            caption = f"[{result['title']}]({result['link']})"
-            await client.send_photo(chat_id=message.chat.id, photo=file_path, caption=caption, parse_mode='markdown')
+        image_url = photo.file_id
+        results = await reverse_image_search(image_url)
+        if isinstance(results, str):
+            await message.reply(results)
         else:
-            await message.reply("No results found.")
+            for detail in results:
+                await message.reply(detail)
         await msg.delete()
 
     elif message.reply_to_message.sticker:
         msg = await message.reply("sᴇᴀʀᴄʜɪɴɢ ғᴏʀ sᴛɪᴄᴋᴇʀ.....")
         sticker = message.reply_to_message.sticker
-        file_id = sticker.file_id
-        file_path = await client.download_media(file_id)
-        result = reverse_image_search(file_path)
-        if result:
-            caption = f"[{result['title']}]({result['link']})"
-            await client.send_sticker(chat_id=message.chat.id, sticker=file_path, caption=caption, parse_mode='markdown')
+        image_url = sticker.file_id
+        results = await reverse_image_search(image_url)
+        if isinstance(results, str):
+            await message.reply(results)
         else:
-            await message.reply("No results found.")
+            for detail in results:
+                await message.reply(detail)
         await msg.delete()
 
-def reverse_image_search(image_path):
-    search_url = "https://www.google.com/searchbyimage"
-    files = {'encoded_image': open(image_path, 'rb')}
-    params = {'image_url': ''}
-    headers = {'User-Agent': 'Mozilla/5.0'}
 
-    response = requests.post(search_url, params=params, headers=headers, files=files)
-
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.text, 'html.parser')
-        anchor = soup.find('a', {'class': 'iKjWAf'})
-        if anchor:
-            title = anchor.text
-            link = anchor['href']
-            return {'title': title, 'link': link}
-    return None
