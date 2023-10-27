@@ -12,7 +12,7 @@ set_chat_lang: "ɢʀᴇᴀᴛ, {} ɪᴛ ɪs ( ғʀᴏᴍ ɴᴏᴡ ᴏɴ!"
 
 
 pm_start_text: |
-   [ㅤ](https://telegra.ph/file/ea772da01836022199827.jpg)
+   [ ](https://telegra.ph/file/ea772da01836022199827.jpg)
    Moshi Moshi {},⚜️
 
    I Am Your {}.
@@ -26,7 +26,7 @@ grp_start_text: "ʜɪ, ɪ'ᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ."
    
 
 pm_help_text: |
-   Main commands available:   (https://telegra.ph/file/ba4621f3251b3c8356adf.jpg)
+   Main commands available:   [ ](https://telegra.ph/file/ba4621f3251b3c8356adf.jpg)
  
    ➛ /help: PM's you this message.  
    ➛ /help <module name>: PM's you info about that module.
