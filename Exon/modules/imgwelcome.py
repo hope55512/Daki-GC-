@@ -5,7 +5,7 @@ from pyrogram import *
 from pyrogram.types import *
 from logging import getLogger
 
-from Exon import Abishnoi as app, EVENT_LOGS as LOG_CHANNEL_ID,BOT_USERNAME
+from Exon import Abishnoi as app, EVENT_LOGS as LOG_CHANNEL_ID
 from Exon.utils.mongo import add_wlcm, rm_wlcm , wlcm
 
 
@@ -21,7 +21,7 @@ class temp:
     U_NAME = None
     B_NAME = None
 
-def circle(pfp, size=(500, 500)):
+def circle(pfp, size=(450, 450)):
     pfp = pfp.resize(size, Image.ANTIALIAS).convert("RGBA")
     bigsize = (pfp.size[0] * 3, pfp.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
@@ -32,21 +32,21 @@ def circle(pfp, size=(500, 500)):
     pfp.putalpha(mask)
     return pfp
 
-def welcomepic(pic, user, chat, id,uname):
+def welcomepic(pic, user, chat, id, uname):
     background = Image.open("Exon/resources/bg2.jpg")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
-        (400, 400)
+        (450, 450)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
+    font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=40)
     welcome_font = ImageFont.truetype('Exon/resources/SwanseaBold-D0ox.ttf', size=60)
-    draw.text((50, 610), f'{unidecode(user)} [{id}]', fill=(255, 255, 255), font=font)
-    # draw.text((30, 670), f'ID: {id}', fill=(255, 255, 255), font=font)
-    draw.text((80, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
-    # draw.text((30,430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
-    pfp_position = (180, 140)
+    draw.text((30, 300), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
+    draw.text((30, 370), f'ID: {id}', fill=(255, 255, 255), font=font)
+    draw.text((30, 40), f"Welcome to {unidecode(chat)}", fill=(225, 225, 225), font=welcome_font)
+    draw.text((30,430), f"USERNAME : {uname}", fill=(255,255,255),font=font)
+    pfp_position = (770, 140)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
@@ -117,13 +117,11 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption= f"""
-𝗛𝗲𝗹𝗹𝗼 {user.mention} 𝗯𝗮𝗯𝘆😜 , 𝗪𝗲𝗹𝗰𝗼𝗺𝗲
-▰▱▰▱▰▱▰▱▰▱▰▱▰
-
+───────────────────
 Nᴀᴍᴇ: {user.mention}
 Iᴅ: {user.id}
-▰▱▰▱▰▱▰▱▰▱▰▱▰
-By: @{BOT_USERNAME}
+UsᴇʀNᴀᴍᴇ: @{user.username}
+───────────────────**
 """,
             )
     except Exception as e:
@@ -156,7 +154,7 @@ __help__ = """
 **➢ /swelcome [ ENABLE/DISABLE ]** - Turn On The Special Welcome For Groups
 """
 
-from Exon.modules.language import gs 
+from Exon.modules.language import gs
 
 
 def get_help(chat):

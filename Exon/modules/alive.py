@@ -4,36 +4,18 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
 
-from Exon import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT, Abishnoi as  pbot
+from Exon import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT,Abishnoi as pbot
 
 import random
-from Exon.Helper.helper import PHOTO,START_STIKERS
-import time
-Alive_txt = "ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ..."
+from Helper.helper import PHOTO
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
-    lol = await message.reply_text(
-                Alive_txt
-            )
-    time.sleep(0.4)
-    await lol.edit_text("🌩")
-    time.sleep(0.5)
-    await lol.edit_text("⚡")
-    time.sleep(0.3)
-    await lol.edit_text("Aʟɪᴠɪɴɢ ʙᴀʙʏ... ")
-    time.sleep(0.4)
-    await lol.delete()
-
-    await message.reply_sticker(
-                random.choice(START_STIKERS)
-            )
-
-    TEXT = f"**ʜᴇʏ {message.from_user.mention},\n\n✨ɪ ᴀᴍ {BOT_NAME}**\n▰▱▰▱▰▱▰▱▰▱▰▱▰\n\n"
-    TEXT += f"➤ **ᴍʏ ᴍᴀsᴛᴇʀ :** [KIRA](tg://user?id={OWNER_ID})\n\n"
-    TEXT += f"➤ **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
-    TEXT += f"➤ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
-    TEXT += f"➤ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}`"
+    TEXT = f"**ʜᴇʏ {message.from_user.mention},\n\n✨ɪ ᴀᴍ {BOT_NAME}**\n▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n"
+    TEXT += f"➢ **ᴍʏ ᴍᴀsᴛᴇʀ :** [KIRA](tg://user?id={OWNER_ID})\n\n"
+    TEXT += f"➢ **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
+    TEXT += f"➢ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
+    TEXT += f"➢ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}`"
     BUTTON = [
         [
             InlineKeyboardButton("ʜᴇʟᴘ", url=f"https://t.me/{BOT_USERNAME}?start=help"),
@@ -51,8 +33,6 @@ async def awake(_, message: Message):
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )
-    # time.sleep(4)
-    # await stkr.delete()
 
 
 __mod_name__ = "Aʟɪᴠᴇ"

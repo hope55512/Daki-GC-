@@ -32,7 +32,7 @@ async def chk_usr(_, message: Message):
         or lastname_before != message.from_user.last_name
     ):
         msg += f"""
-➤ **Iᴍᴘᴏꜱᴛᴇʀ Dᴇᴛᴇᴄᴛᴇᴅ** :
+➢ **Iᴍᴘᴏꜱᴛᴇʀ Dᴇᴛᴇᴄᴛᴇᴅ** :
 ━━━━━━━━━━━━━━━━━━━
 ➣ User: {message.from_user.mention}
 ➣ ID: {message.from_user.id}
@@ -46,7 +46,7 @@ async def chk_usr(_, message: Message):
             else "NO USERNAME"
         )
         msg += """
-➤ **Cʜᴀɴɢᴇᴅ UꜱᴇʀNᴀᴍᴇ**:
+➢ **Cʜᴀɴɢᴇᴅ UꜱᴇʀNᴀᴍᴇ**:
 ━━━━━━━━━━━━━━━━━━━
 ➣ FROM: {bef}
 ➣ TO: {aft}
@@ -60,7 +60,7 @@ async def chk_usr(_, message: Message):
         )
     if first_name != message.from_user.first_name:
         msg += """
-➤ **Cʜᴀɴɢᴇᴅ Fɪʀꜱᴛ Nᴀᴍᴇ**
+➢ **Cʜᴀɴɢᴇᴅ Fɪʀꜱᴛ Nᴀᴍᴇ**
 ━━━━━━━━━━━━━━━━━━━
 ➣ FROM: {bef}
 ➣ TO: {aft}
@@ -78,7 +78,7 @@ async def chk_usr(_, message: Message):
         lastname_before = lastname_before or "NO LAST NAME"
         lastname_after = message.from_user.last_name or "NO LAST NAME"
         msg += """
-➤ **Cʜᴀɴɢᴇᴅ Lᴀꜱᴛ Nᴀᴍᴇ**:
+➢ **Cʜᴀɴɢᴇᴅ Lᴀꜱᴛ Nᴀᴍᴇ**:
 ━━━━━━━━━━━━━━━━━━━
 ➣ FROM: {bef}
 ➣ TO: {aft}

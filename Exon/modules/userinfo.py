@@ -238,21 +238,21 @@ def info(update: Update, context: CallbackContext):
     rep = message.reply_text("<code>ᴀᴩᴩʀᴀɪsɪɴɢ...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"ㅤ✦ ᴜsᴇʀ ɪɴғᴏ ✦\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n"
-        f"➤ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
-        f"➤ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
+        f"ㅤ✦ ᴜsᴇʀ ɪɴғᴏ ✦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n"
+        f"➢ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
+        f"➢ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n➤ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
+        text += f"\n➢ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➤ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
+        text += f"\n➢ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
 
-    text += f"\n➤ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
+    text += f"\n➢ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n➤ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
+        _stext = "\n➢ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
 
         status = status = bot.get_chat_member(chat.id, user.id).status
         if status:
@@ -399,7 +399,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>📑 🄲🅄🅁🅁🄴🄽🅃 🅂🅃🄰🅃🅂:</b>\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>📑 🄲🅄🅁🅁🄴🄽🅃 🅂🅃🄰🅃🅂:</b>\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     result+= "\n\n<b>ᴍʏ ᴍᴀꜱᴛᴇʀ</b>: @SIAmKira"
     update.effective_message.reply_photo("https://telegra.ph/file/c91952a21cf0ba0bfaffb.jpg",result,reply_markup=InlineKeyboardMarkup(STATS_INFO),parse_mode=ParseMode.HTML)
