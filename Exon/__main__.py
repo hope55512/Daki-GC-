@@ -278,7 +278,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         else:
             first_name = update.effective_user.first_name
             caption = "*Moshi Moshi* {}...".format(escape_markdown(first_name))
-            update.effective_message.reply_text(random.choice(PHOTO), caption=caption, parse_mode=ParseMode.MARKDOWN)
+            update.effective_message.reply_photo(random.choice(PHOTO), caption=caption, parse_mode=ParseMode.MARKDOWN)
 
 
 
