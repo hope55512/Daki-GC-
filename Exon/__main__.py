@@ -29,7 +29,7 @@ from Exon import LOGGER as log
 from Exon import OWNER_ID, OWNER_USERNAME, SUPPORT_CHAT,UPDATE_CHAT, TOKEN
 from Exon import Abishnoi as pbot
 from Exon import StartTime, dispatcher, telethn, updater
-from Exon.Helper.helper import PM_PHOTO
+
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
@@ -67,6 +67,18 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`  ᴅᴀʀʟɪɴɢ, \nʜᴏᴡ ᴀʀᴇ ʏᴏᴜ ʙᴀʙʏ 😜. . .  
 """
+
+PM_PHOTO = [
+    "https://te.legra.ph/file/e833e8e51f8f141f05b89.jpg",
+    "https://telegra.ph/file/f3f2fbc1f4fe27be928b0.jpg",
+    "https://telegra.ph/file/fb2d9535da92eb4e1cce1.jpg",
+    "https://telegra.ph/file/0549ae4812a41b4d76e9b.jpg",
+    "https://telegra.ph/file/f6edd6a18ea0dea31ba5f.jpg",
+    "https://telegra.ph/file/b6448fa7b7a1b7ff89faa.jpg",
+    "https://telegra.ph/file/c9daf27d110f09e118067.jpg",
+    "https://telegra.ph/file/6e6c13e103826fedba7c6.jpg",
+    "https://telegra.ph/file/e50b360220004444350fd.jpg",
+]
 
 buttons = [
     [
