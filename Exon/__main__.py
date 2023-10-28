@@ -88,7 +88,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text=f"Music", callback_data="ABG_music"),
-    ]
+    ],
     [
         InlineKeyboardButton(text=f"⛩Help & Commands⛩", callback_data="help_back"),
     ]
