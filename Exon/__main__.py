@@ -73,7 +73,6 @@ PHOTO = [
     "https://telegra.ph/file/fb2d9535da92eb4e1cce1.jpg",
     "https://telegra.ph/file/0549ae4812a41b4d76e9b.jpg",
     "https://telegra.ph/file/f6edd6a18ea0dea31ba5f.jpg",
-    "https://telegra.ph/file/e50b360220004444350fd.jpg",
 ]
 
 buttons = [
