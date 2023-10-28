@@ -268,11 +268,10 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
 
         else:
             first_name = update.effective_user.first_name
-            # usr = update.effective_user
-            # lol = update.effective_message.reply_text(
-            #     PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
-            # )
-            update.effective_message.reply_photo("https://telegra.ph/file/848cf28a2e1dc98e116aa.jpg",caption="Hello  <code>{}</code...").format(escape_markdown(first_name),)
+            caption = "*Hello* {}...".format(escape_markdown(first_name))
+            update.effective_message.reply_photo("https://telegra.ph/file/848cf28a2e1dc98e116aa.jpg", caption=caption, parse_mode=ParseMode.MARKDOWN)
+
+
 
 
             update.effective_message.reply_text(
