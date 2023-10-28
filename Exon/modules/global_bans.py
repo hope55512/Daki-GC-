@@ -595,7 +595,7 @@ dispatcher.add_handler(UNGBAN_HANDLER)
 dispatcher.add_handler(GBAN_LIST)
 dispatcher.add_handler(GBAN_STATUS)
 
-__mod_name__ = "A-sᴘᴀᴍ"
+__mod_name__ = "A-Spam"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
