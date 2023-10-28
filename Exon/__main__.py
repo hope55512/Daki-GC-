@@ -69,7 +69,6 @@ PM_START_TEX = """
 """
 
 PM_PHOTO = [
-    "https://te.legra.ph/file/e833e8e51f8f141f05b89.jpg",
     "https://telegra.ph/file/f3f2fbc1f4fe27be928b0.jpg",
     "https://telegra.ph/file/fb2d9535da92eb4e1cce1.jpg",
     "https://telegra.ph/file/0549ae4812a41b4d76e9b.jpg",
