@@ -538,8 +538,8 @@ def send_settings(chat_id: int, user_id: int, user=False):
                 "*{}*:\n{}".format(mod.__mod_name__, mod.__user_settings__(user_id))
                 for mod in USER_SETTINGS.values()
             )
-            dispatcher.bot.send_message(
-                user_id,
+            .bot.send_message(
+                user_id,dispatcher
                 "ᴛʜᴇsᴇ ᴀʀᴇ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴇᴛᴛɪɴɢs:" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN,
             )

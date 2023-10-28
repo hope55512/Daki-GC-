@@ -116,9 +116,9 @@ def ABG_about_callback(update, context):
         )
 
     elif query.data == "ABG_music":
-        msg = query.message.send_message(query.chat.id,"/mhelp")
-        time.sleep(2)
-        msg.delete()
+        dispatcher.bot.send_message("/mhelp")
+        #  time.sleep(2)
+        # msg.delete()
     
 
 
