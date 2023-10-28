@@ -125,8 +125,8 @@ from Exon.modules.language import gs
 def get_help(chat):
     return gs(chat, "imposter_help")
 
-
 __mod_name__ = "Imposter ⚠️"
+
 __help__ = """
 ──「 Iᴍᴘᴏꜱᴛᴇʀ 」──
 

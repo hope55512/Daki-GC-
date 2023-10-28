@@ -281,8 +281,8 @@ def buttons(update: Update, context: CallbackContext):
             query.answer("🛑 ꜰᴀɪʟᴇᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴍᴇꜱꜱᴀɢᴇ!")
 
 
-__mod_name__ = "Report 🔉"
 
+__mod_name__ = "Report 🔉"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

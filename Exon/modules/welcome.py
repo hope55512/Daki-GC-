@@ -1358,4 +1358,4 @@ def get_help(chat):
 
 # """
 
-__mod_name__ = "Wᴇʟᴄᴏᴍᴇ"
+__mod_name__ = "Wᴇʟᴄᴏᴍᴇ ⛩️"

@@ -312,7 +312,7 @@ def log_setting_callback(update: Update, context: CallbackContext):
     cb.answer("Now, What i need to do")
 
 
-__mod_name__ = "Logs 📃"
+__mod_name__ = "Logs 📉"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

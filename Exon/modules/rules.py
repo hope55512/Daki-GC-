@@ -144,6 +144,8 @@ def __chat_settings__(chat_id, user_id):
 __mod_name__ = "Rules 📃"
 
 
+
+
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 

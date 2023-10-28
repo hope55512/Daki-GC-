@@ -1,11 +1,11 @@
 from pyrogram import filters, types
 import requests
-from Exon import Abishnoi as pbot
+from Exon import Abishnoi as app
 
 # Define a global variable to store the schedule text
 schedule_text = ""
 
-@pbot.on_message(filters.command('latest'))
+@app.on_message(filters.command('latest'))
 def schedule(_, message):
     global schedule_text
     if not schedule_text:
@@ -20,7 +20,7 @@ def schedule(_, message):
         reply_markup=inline_keyboard,
     )
 
-@pbot.on_callback_query(filters.regex("refresh_schedule"))
+@app.on_callback_query(filters.regex("refresh_schedule"))
 def refresh_schedule(_, query):
     global schedule_text
     schedule_text = get_schedule_text()
