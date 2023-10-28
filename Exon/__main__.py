@@ -68,17 +68,13 @@ PM_START_TEX = """
 ʜᴇʟʟᴏ `{}`  ᴅᴀʀʟɪɴɢ, \nʜᴏᴡ ᴀʀᴇ ʏᴏᴜ ʙᴀʙʏ 😜. . .  
 """
 
-PM_PHOTO = [
+PHOTO = [
     "https://telegra.ph/file/f3f2fbc1f4fe27be928b0.jpg",
     "https://telegra.ph/file/fb2d9535da92eb4e1cce1.jpg",
     "https://telegra.ph/file/0549ae4812a41b4d76e9b.jpg",
     "https://telegra.ph/file/f6edd6a18ea0dea31ba5f.jpg",
-    "https://telegra.ph/file/b6448fa7b7a1b7ff89faa.jpg",
-    "https://telegra.ph/file/6e6c13e103826fedba7c6.jpg",
     "https://telegra.ph/file/e50b360220004444350fd.jpg",
 ]
-
-PHOTO = random.choice(PM_PHOTO)
 
 buttons = [
     [
@@ -282,7 +278,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         else:
             first_name = update.effective_user.first_name
             caption = "*Hello* {}...".format(escape_markdown(first_name))
-            update.effective_message.reply_photo(PHOTO, caption=caption, parse_mode=ParseMode.MARKDOWN)
+            update.effective_message.reply_text
+            (random.choice(PHOTO), caption=caption, 
+            parse_mode=ParseMode.MARKDOWN)
 
 
 
