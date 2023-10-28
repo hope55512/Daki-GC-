@@ -14,9 +14,12 @@ PM_PHOTO = [
     "https://telegra.ph/file/0549ae4812a41b4d76e9b.jpg",
     "https://telegra.ph/file/f6edd6a18ea0dea31ba5f.jpg",
     "https://telegra.ph/file/b6448fa7b7a1b7ff89faa.jpg",
+    "https://telegra.ph/file/c9daf27d110f09e118067.jpg",
     "https://telegra.ph/file/6e6c13e103826fedba7c6.jpg",
     "https://telegra.ph/file/e50b360220004444350fd.jpg",
 ]
+
+PHOTO = random.choice(PM_PHOTO)
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
@@ -38,7 +41,7 @@ async def awake(_, message: Message):
     ],
     ]
     await message.reply_photo(
-        {random.choice(PM_PHOTO)},
+        PHOTO,
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )

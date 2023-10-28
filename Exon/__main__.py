@@ -79,6 +79,8 @@ PM_PHOTO = [
     "https://telegra.ph/file/e50b360220004444350fd.jpg",
 ]
 
+PHOTO = random.choice(PM_PHOTO)
+
 buttons = [
     [
         InlineKeyboardButton(
@@ -281,7 +283,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         else:
             first_name = update.effective_user.first_name
             caption = "*Hello* {}...".format(escape_markdown(first_name))
-            update.effective_message.reply_photo({random.choice(PM_PHOTO)}, caption=caption, parse_mode=ParseMode.MARKDOWN)
+            update.effective_message.reply_photo(PM_PHOTO, caption=caption, parse_mode=ParseMode.MARKDOWN)
 
 
 
