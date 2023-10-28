@@ -29,6 +29,7 @@ from Exon import LOGGER as log
 from Exon import OWNER_ID, OWNER_USERNAME, SUPPORT_CHAT,UPDATE_CHAT, TOKEN
 from Exon import Abishnoi as pbot
 from Exon import StartTime, dispatcher, telethn, updater
+from Exon.Helper.helper import PM_PHOTO
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
@@ -269,7 +270,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
         else:
             first_name = update.effective_user.first_name
             caption = "*Hello* {}...".format(escape_markdown(first_name))
-            update.effective_message.reply_photo("https://telegra.ph/file/848cf28a2e1dc98e116aa.jpg", caption=caption, parse_mode=ParseMode.MARKDOWN)
+            update.effective_message.reply_photo({random.choice(PM_PHOTO)}, caption=caption, parse_mode=ParseMode.MARKDOWN)
 
 
 

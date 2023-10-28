@@ -15,6 +15,18 @@ PHOTO = [
     "https://telegra.ph/file/ae35d8a131d0e175c0e49.jpg",
 ]
 
+PM_PHOTO = [
+    "https://te.legra.ph/file/e833e8e51f8f141f05b89.jpg",
+    "https://telegra.ph/file/f3f2fbc1f4fe27be928b0.jpg",
+    "https://telegra.ph/file/fb2d9535da92eb4e1cce1.jpg",
+    "https://telegra.ph/file/0549ae4812a41b4d76e9b.jpg",
+    "https://telegra.ph/file/f6edd6a18ea0dea31ba5f.jpg",
+    "https://telegra.ph/file/b6448fa7b7a1b7ff89faa.jpg",
+    "https://telegra.ph/file/c9daf27d110f09e118067.jpg",
+    "https://telegra.ph/file/6e6c13e103826fedba7c6.jpg",
+    "https://telegra.ph/file/e50b360220004444350fd.jpg",
+]
+ 
 START_VIDEO = [
 "https://telegra.ph/file/e374ba92cd333abe12c8a.mp4",
 "https://telegra.ph/file/39a18d24aa651ef6497af.mp4",

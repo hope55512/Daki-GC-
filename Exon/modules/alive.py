@@ -7,6 +7,7 @@ from telethon import __version__ as tlhver
 from Exon import BOT_NAME, BOT_USERNAME, OWNER_ID, SUPPORT_CHAT,Abishnoi as pbot
 
 import random
+from Exon.Helper.helper import PM_PHOTO
 
 @pbot.on_message(filters.command("alive"))
 async def awake(_, message: Message):
@@ -28,7 +29,7 @@ async def awake(_, message: Message):
     ],
     ]
     await message.reply_photo(
-        "https://te.legra.ph/file/4a7770ee324f687bb9306.jpg",
+        {random.choice(PM_PHOTO)},
         caption=TEXT,
         reply_markup=InlineKeyboardMarkup(BUTTON),
     )
