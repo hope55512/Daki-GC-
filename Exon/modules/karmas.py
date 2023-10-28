@@ -183,7 +183,7 @@ __help__ = """
 """
 
 
-__mod_name__ = "Kᴀʀᴍᴀ 💯"
+__mod_name__ = "Karma 💯"
 
 from Exon.modules.language import gs
 

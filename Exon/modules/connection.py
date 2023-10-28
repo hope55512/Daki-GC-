@@ -399,7 +399,7 @@ def connect_button(update, context):
         connect_chat(update, context)
 
 
-__mod_name__ = "Cᴏɴɴᴇᴄᴛ"
+__mod_name__ = "Connect 📶"
 
 
 CONNECT_CHAT_HANDLER = CommandHandler(

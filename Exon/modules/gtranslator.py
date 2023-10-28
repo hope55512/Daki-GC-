@@ -141,7 +141,7 @@ dispatcher.add_handler(
 
 __command_list__ = ["tr", "tl", "lang", "languages", "splcheck", "tts"]
 
-__mod_name__ = "Tʀᴀɴꜱʟᴀᴛᴇ"
+__mod_name__ = "Translate ⥩"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

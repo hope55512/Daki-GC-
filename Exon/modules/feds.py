@@ -2385,7 +2385,7 @@ def fed_user_help(update: Update, context: CallbackContext):
     )
 
 
-__mod_name__ = "Fᴇᴅs "
+__mod_name__ = "Feds "
 
 from Exon.modules.language import gs
 

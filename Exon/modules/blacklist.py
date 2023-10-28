@@ -528,7 +528,7 @@ def blacklist_help_bse(update: Update, context: CallbackContext):
     bot.answer_callback_query(query.id)
 
 
-__mod_name__ = "Bʟᴀᴄᴋʟɪꜱᴛ"
+__mod_name__ = "Blacklist 🚫"
 
 from Exon.modules.language import gs
 

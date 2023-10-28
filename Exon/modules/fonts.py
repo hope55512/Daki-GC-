@@ -193,4 +193,4 @@ async def style(c, m):
         pass
 
 
-__mod_name__ = "Fᴏɴᴛs"
+__mod_name__ = "Fonts 💫"
