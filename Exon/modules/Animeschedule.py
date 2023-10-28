@@ -46,7 +46,7 @@ def get_schedule_text():
 
     return "\n".join(text)
 
-__mod_name__ = "Sᴄʜᴇᴅᴜʟᴇ 📑"
+__mod_name__ = "Schedule 📑"
 
 __help__ = """
  ❍ `/latest`: to see the latest anime episode

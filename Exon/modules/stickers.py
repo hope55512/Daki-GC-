@@ -989,7 +989,7 @@ async def drawText(image_path, text):
     return webp_file
 
 
-__mod_name__ = "Sᴛɪᴄᴋᴇʀ 🃏"
+__mod_name__ = "Sticker 🃏"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ

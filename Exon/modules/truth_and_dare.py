@@ -54,7 +54,7 @@ async def _(asux):
         await asux.reply(f"ᴇʀʀᴏʀ ʀᴇᴘᴏʀᴛ @{SUPPORT_CHAT}")
 
 
-__mod_name__ = "Tʀᴜᴛʜ-Dᴀʀᴇ 🧩"
+__mod_name__ = "Truth-Dare 🧩"
 
 from Exon.modules.language import gs
 

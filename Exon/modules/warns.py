@@ -546,7 +546,7 @@ dispatcher.add_handler(WARN_STRENGTH_HANDLER)
 dispatcher.add_handler(WARN_FILTER_HANDLER, WARN_HANDLER_GROUP)
 
 
-__mod_name__ = "Wᴀʀɴs ⚠️"
+__mod_name__ = "Warns ⚠️"
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 

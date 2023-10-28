@@ -130,7 +130,7 @@ async def bot_inline(_, inline_query):
         await inline_query.answer(answers[-1], cache_time=0)
 
 
-__mod_name__ = "Wʜɪꜱᴘʜᴇʀ 📬"
+__mod_name__ = "Whispher 📬"
 
 
 # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ

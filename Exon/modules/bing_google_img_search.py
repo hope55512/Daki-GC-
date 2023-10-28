@@ -95,7 +95,7 @@ async def googleimg_search(client: Client, message: Message):
 #  ➢ /bingimg*:* ᴛᴏ ɢᴇᴛ ʀᴇꜱᴜʟᴛᴇᴅ ɪᴍᴀɢᴇ ꜰʀᴏᴍ ʙɪɴɢ.
 # """
 
-__mod_name__ = "Iᴍɢ"
+__mod_name__ = "Img 🖼"
 
 from Exon.modules.language import gs
 

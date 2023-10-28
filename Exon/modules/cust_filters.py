@@ -595,7 +595,7 @@ def __chat_settings__(chat_id, user_id):
     return "There are `{}` custom filters here.".format(len(cust_filters))
 
 
-__mod_name__ = "Fɪʟᴛᴇʀs"
+__mod_name__ = "Filters 👓"
 
 FILTER_HANDLER = DisableAbleCommandHandler("filter", filters, run_async=True)
 STOP_HANDLER = DisableAbleCommandHandler("stop", stop_filter, run_async=True)
