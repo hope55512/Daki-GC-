@@ -87,6 +87,9 @@ buttons = [
         InlineKeyboardButton(text="📢 Update", url=f"https://t.me/{UPDATE_CHAT}"),
     ],
     [
+        InlineKeyboardButton(text=f"Music", callback_data="ABG_music"),
+    ]
+    [
         InlineKeyboardButton(text=f"⛩Help & Commands⛩", callback_data="help_back"),
     ]
 ]

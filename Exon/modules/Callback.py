@@ -114,6 +114,14 @@ def ABG_about_callback(update, context):
                 [[InlineKeyboardButton(text="ɢᴏ ʙᴀᴄᴋ", callback_data="ABG_")]]
             ),
         )
+
+    elif query.data == "ABG_music":
+        msg = query.message.send_message(query.chat.id,"/mhelp")
+        time.sleep(2)
+        msg.delete()
+    
+
+
     elif query.data == "ABG_ai":
         query.message.edit_text(
             text=f"""
