@@ -272,6 +272,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             # lol = update.effective_message.reply_text(
             #     PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             # )
+            update.effective_message.reply_photo("https://telegra.ph/file/848cf28a2e1dc98e116aa.jpg",
+                                                 "*Hello* `{}`...").format(escape_markdown(first_name),)
+
 
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
