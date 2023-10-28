@@ -1,4 +1,3 @@
-
 from io import BytesIO
 from time import sleep
 
@@ -170,18 +169,18 @@ def __migrate__(old_chat_id, new_chat_id):
     user_db.migrate_chat(old_chat_id, new_chat_id)
 
 
-# __mod_name__ = "𝐆-ᴄᴀsᴛ"
+__mod_name__ = "𝐆-ᴄᴀsᴛ"
 
 
-# # ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
+# ғᴏʀ ʜᴇʟᴘ ᴍᴇɴᴜ
 
 
-# # """
-# from Exon.modules.language import gs
+# """
+from Exon.modules.language import gs
 
 
-# def get_help(chat):
-#     return gs(chat, "gcast_help")
+def get_help(chat):
+    return gs(chat, "gcast_help")
 
 
 # """
