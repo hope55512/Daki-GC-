@@ -87,9 +87,6 @@ buttons = [
         InlineKeyboardButton(text="📢 Update", url=f"https://t.me/{UPDATE_CHAT}"),
     ],
     [
-        InlineKeyboardButton(text=f"Music", callback_data="ABG_music"),
-    ],
-    [
         InlineKeyboardButton(text=f"⛩Help & Commands⛩", callback_data="help_back"),
     ]
 ]
@@ -538,8 +535,8 @@ def send_settings(chat_id: int, user_id: int, user=False):
                 "*{}*:\n{}".format(mod.__mod_name__, mod.__user_settings__(user_id))
                 for mod in USER_SETTINGS.values()
             )
-            .bot.send_message(
-                user_id,dispatcher
+            dispatcher.bot.send_message(
+                user_id,
                 "ᴛʜᴇsᴇ ᴀʀᴇ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴇᴛᴛɪɴɢs:" + "\n\n" + settings,
                 parse_mode=ParseMode.MARKDOWN,
             )

@@ -115,11 +115,6 @@ def ABG_about_callback(update, context):
             ),
         )
 
-    elif query.data == "ABG_music":
-        dispatcher.bot.send_message("/mhelp")
-        #  time.sleep(2)
-        # msg.delete()
-    
 
 
     elif query.data == "ABG_ai":
