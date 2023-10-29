@@ -253,6 +253,9 @@ def upload_text(data: str) -> typing.Optional[str]:
     url[5] = base58.b58encode(passphrase).decode()
     return urlunparse(url)
 
+def is_module_loaded(name):
+    return name not in NO_LOAD
+
 async def getText(message):
     """Extract Text From Commands"""
     text_to_return = message.text
