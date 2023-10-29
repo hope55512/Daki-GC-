@@ -56,32 +56,33 @@ def welcomepic(pic, user, chat, id, uname):
 
 @app.on_message(filters.command("swelcome") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n/swelcome [ENABLE|DISABLE]"
-    if len(message.command) == 1:
-        return await message.reply_text(usage)
+    usage = "Usage:\n/swelcome [ENABLE|DISABLE]"
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
+
     if user.status in (
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
-      A = await wlcm.find_one({"chat_id" : chat_id})
-      state = message.text.split(None, 1)[1].strip()
-      state = state.lower()
-      if state == "enable":
-        if A:
-           return await message.reply_text("Special Welcome Already Enabled")
-        elif not A:
-           await add_wlcm(chat_id)
-           await message.reply_text(f"Enabled Special Welcome in {message.chat.title}")
-      elif state == "disable":
-        if not A:
-           return await message.reply_text("Special Welcome Already Disabled")
-        elif A:
-           await rm_wlcm(chat_id)
-           await message.reply_text(f"Disabled Special Welcome in {message.chat.title}")
-      else:
-        await message.reply_text(usage)
+        A = await wlcm.find_one({"chat_id": chat_id})
+        state = message.text.split(None, 1)[1].strip().lower() if len(message.command) > 1 else "enable"
+
+        if state == "enable":
+            if A:
+                return await message.reply_text("Special Welcome Already Enabled")
+            else:
+                await add_wlcm(chat_id)
+                await message.reply_text(f"Enabled Special Welcome in {message.chat.title}")
+
+        elif state == "disable":
+            if not A:
+                return await message.reply_text("Special Welcome Already Disabled")
+            else:
+                await rm_wlcm(chat_id)
+                await message.reply_text(f"Disabled Special Welcome in {message.chat.title}")
+
+        else:
+            await message.reply_text(usage)
     else:
         await message.reply("Only Admins Can Use This Command")
 
