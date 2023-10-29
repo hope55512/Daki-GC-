@@ -1,36 +1,28 @@
-from . import AsuXdb
+from Exon.modules.no_sql import Asudb
 
-coupledb = AsuXdb.couple
+coupledb = Asudb.couple
 
-async def _get_lovers(cid: int):
-    lovers = await coupledb.find_one({"chat_id": cid})
-    if lovers:
-        lovers = lovers["couple"]
-    else:
-        lovers = {}
-    return lovers
 
-async def _get_image(cid: int):
-    lovers = await coupledb.find_one({"chat_id": cid})
-    if lovers:
-        lovers = lovers["img"]
-    else:
-        lovers = {}
-    return lovers
+async def _get_lovers(chat_id: int):
+    lovers = await coupledb.find_one({"chat_id": chat_id})
+    if not lovers:
+        return {}
+    return lovers["couple"]
 
-async def get_couple(cid: int, date: str):
-    lovers = await _get_lovers(cid)
+async def get_couple(chat_id: int, date: str):
+    lovers = await _get_lovers(chat_id)
     if date in lovers:
         return lovers[date]
-    else:
-        return False
+    return False
 
+async def del_couple(chat_id: int):
+    lovers = await coupledb.find_one({"chat_id": chat_id})
+    if lovers:
+        return await coupledb.delete_one({"chat_id": chat_id})
 
-async def save_couple(cid: int, date: str, couple: dict, img: str):
-    lovers = await _get_lovers(cid)
+async def save_couple(chat_id: int, date: str, couple: dict):
+    lovers = await _get_lovers(chat_id)
     lovers[date] = couple
     await coupledb.update_one(
-        {"chat_id": cid},
-        {"$set": {"couple": lovers, "img": img}},
-        upsert=True,
+        {"chat_id": chat_id}, {"$set": {"couple": lovers}}, upsert=True
     )
