@@ -137,6 +137,10 @@ Hᴇʀᴇ Aʀᴇ Tʜᴇ Aɪ Mᴏᴅᴜʟᴇꜱ Lɪꜱᴛ Aᴠᴀɪʟᴀʙʟᴇ I
                 [[InlineKeyboardButton(text="Gᴏ Bᴀᴄᴋ", callback_data="start_back")]]
             ),
         )
+    
+
+
+
     elif query.data == "ABG_support":
         query.message.edit_text(
             text=f"*๏ {BOT_NAME} sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛs*"
@@ -158,6 +162,137 @@ Hᴇʀᴇ Aʀᴇ Tʜᴇ Aɪ Mᴏᴅᴜʟᴇꜱ Lɪꜱᴛ Aᴠᴀɪʟᴀʙʟᴇ I
                 ]
             ),
         )
+
+    elif query.data == "ABG_music":
+        query.message.edit_text(
+            text=f"*๏ {BOT_NAME} ᴍᴜꜱɪᴄ ʜᴇʟᴘ ꜰᴇᴀᴛᴜʀᴇꜱ*",
+
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="ᴀᴅᴍɪɴ", callback_data="ABG_madmin"
+                        ),
+                        InlineKeyboardButton(
+                            text="ᴘʟᴀʏ", callback_data="ABG_play"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="ʙᴏᴛ", callback_data="ABG_bot"
+                        ),
+                        InlineKeyboardButton(
+                            text="ᴇxᴛʀᴀ", callback_data="ABG_extra"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(text="⤶  Gᴏ Bᴀᴄᴋ", callback_data="ABG_"),
+                    ],
+                ]
+            ),
+        )
+
+    elif query.data == "ABG_madmin":
+        query.message.edit_text(
+            text=f"*๏ {BOT_NAME} ᴍᴜꜱɪᴄ ꜰᴇᴀᴛᴜʀᴇꜱ  ꜰᴏʀ ᴀᴅᴍɪɴꜱ*"
+            "\n/pause : ᴩᴀᴜsᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ."
+
+            "\n/resume : ʀᴇsᴜᴍᴇ ᴛʜᴇ ᴩᴀᴜsᴇᴅ sᴛʀᴇᴀᴍ."
+
+            "\n/skip : sᴋɪᴩ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ ᴀɴᴅ sᴛᴀʀᴛ sᴛʀᴇᴀᴍɪɴɢ ᴛʜᴇ ɴᴇxᴛ ᴛʀᴀᴄᴋ ɪɴ ǫᴜᴇᴜᴇ.\n"
+
+            "\n/end ᴏʀ /stop : ᴄʟᴇᴀʀs ᴛʜᴇ ǫᴜᴇᴜᴇ ᴀɴᴅ ᴇɴᴅ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴩʟᴀʏɪɴɢ sᴛʀᴇᴀᴍ.\n"
+
+            "\n/player : ɢᴇᴛ ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴩʟᴀʏᴇʀ ᴩᴀɴᴇʟ.\n"
+
+            "\n/queue : sʜᴏᴡs ᴛʜᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ʟɪsᴛ.\n",
+
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="⤶  Gᴏ Bᴀᴄᴋ", callback_data="ABG_music"),
+                    ],
+                ]
+            ),
+        )
+    
+    elif query.data == "ABG_play":
+        query.message.edit_text(
+            text=f"*๏ {BOT_NAME} ᴍᴜꜱɪᴄ ꜰᴇᴀᴛᴜʀᴇꜱ  ꜰᴏʀ ᴀᴅᴍɪɴꜱ*"
+            "\n/play or /vplay or /cplay  - ʙᴏᴛ ᴡɪʟʟ ꜱᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ʏᴏᴜʀ ɢɪᴠᴇɴ ϙᴜᴇʀʏ on ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴏʀ ꜱᴛʀᴇᴀᴍ ʟɪᴠᴇ ʟɪɴᴋꜱ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛꜱ.\n"
+
+            "\n/playforce or /vplayforce or /cplayforce -  ғᴏʀᴄᴇ ᴘʟᴀʏ ꜱᴛᴏᴘꜱ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀʏɪɴɢ ᴛʀᴀᴄᴋ ᴏɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ᴀɴᴅ ꜱᴛᴀʀᴛꜱ ᴘʟᴀʏɪɴɢ ᴛʜᴇ ꜱᴇᴀʀᴄʜᴇᴅ ᴛʀᴀᴄᴋ ɪɴꜱᴛᴀɴᴛʟʏ ᴡɪᴛʜᴏᴜᴛ ᴅɪꜱᴛᴜʀʙɪɴɢ/clearing queue.\n"
+
+            "\n/channelplay ᴄʜᴀᴛ ᴜꜱᴇʀɴᴀᴍᴇ ᴏʀ ɪᴅ ᴏʀ ᴅɪꜱᴀʙʟᴇ - ᴄᴏɴɴᴇᴄᴛ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀ ᴀɴᴅ ꜱᴛʀᴇᴀᴍ ᴍᴜꜱɪᴄ ᴏɴ ᴄʜᴀɴɴᴇʟ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ ғʀᴏᴍ ʏᴏᴜʀ ɢʀᴏᴜᴘ.\n"
+
+
+            "\nʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ\n"
+            "\nʙᴏᴛ  ꜱᴇʀᴠᴇʀ ᴘʟᴀʏʟɪꜱᴛꜱ:"
+            "\n/playlist  - ᴄʜᴇᴄᴋ ʏᴏᴜʀ ꜱᴀᴠᴇᴅ ᴘʟᴀʏʟɪꜱᴛ ᴏɴ ꜱᴇʀᴠᴇʀꜱ."
+            "\n/deleteplaylist - ᴅᴇʟᴇᴛᴇ ᴀɴʏ ꜱᴀᴠᴇᴅ ᴍᴜꜱɪᴄ ɪɴ ʏᴏᴜʀ ᴘʟᴀʏʟɪꜱᴛ"
+            "\n/play  - ꜱᴛᴀʀᴛ ᴘʟᴀʏɪɴɢ ʏᴏᴜʀ ꜱᴀᴠᴇᴅ ᴘʟᴀʏʟɪꜱᴛ ғʀᴏᴍ ꜱᴇʀᴠᴇʀꜱ."
+            ,
+
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="⤶  Gᴏ Bᴀᴄᴋ", callback_data="ABG_music"),
+                    ],
+                ]
+            ),
+        )
+
+    elif query.data == "ABG_bot":
+        query.message.edit_text(
+            text=f"*๏ {BOT_NAME} ᴍᴜꜱɪᴄ ꜰᴇᴀᴛᴜʀᴇꜱ  ꜰᴏʀ ᴀᴅᴍɪɴꜱ*"
+            "\n/stats - ɢᴇᴛ ᴛᴏᴘ 10 ᴛʀᴀᴄᴋꜱ ɢʟᴏʙᴀʟ ꜱᴛᴀᴛꜱ, ᴛᴏᴘ 10 ᴜꜱᴇʀꜱ ᴏғ ʙᴏᴛ, ᴛᴏᴘ 10 ᴄʜᴀᴛꜱ ᴏɴ ʙᴏᴛ, ᴛᴏᴘ 10 ᴘʟᴀʏᴇᴅ ɪɴ ᴀ ᴄʜᴀᴛ ᴇᴛᴄ ᴇᴛᴄ."
+
+            "\n/sudolist - ᴄʜᴇᴄᴋ sᴜᴅᴏ ᴜsᴇʀs ᴏғ ᴀʙɢ  ʙᴏᴛ"
+
+            "\n/lyrics ᴍᴜsɪᴄ ɴᴀᴍᴇ - sᴇᴀʀᴄʜᴇs ʟʏʀɪᴄs ғᴏʀ ᴛʜᴇ ᴘᴀʀᴛɪᴄᴜʟᴀʀ ᴍᴜsɪᴄ ᴏɴ ᴡᴇʙ."
+
+            "\n/song ᴛʀᴀᴄᴋ ɴᴀᴍᴇ or ʏᴛ ʟɪɴᴋ - ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ᴛʀᴀᴄᴋ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ɪɴ ᴍᴘ3 or ᴍᴘ4 ғᴏʀᴍᴀᴛꜱ."
+
+            "\n/player -  ɢᴇt ᴀ ɪɴᴛᴇʀᴀᴄᴛɪᴠᴇ ᴘʟᴀʏɪɴɢ ᴘᴀɴᴇʟ."
+
+            "\nc ꜱᴛᴀɴᴅꜱ ꜰᴏʀ ᴄʜᴀɴɴᴇʟ ᴘʟᴀʏ."
+
+            "\n/queue ᴏʀ /cqueue- ᴄʜᴇᴄᴋ Qᴜᴇᴜᴇ ʟɪꜱᴛ ᴏꜰ ᴍᴜꜱɪᴄ."
+            ,
+
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="⤶  Gᴏ Bᴀᴄᴋ", callback_data="ABG_music"),
+                    ],
+                ]
+            ),
+        )
+
+    elif query.data == "ABG_extra":
+        query.message.edit_text(
+            text=f"*๏ {BOT_NAME} ᴍᴜꜱɪᴄ ꜰᴇᴀᴛᴜʀᴇꜱ  ꜰᴏʀ ᴀᴅᴍɪɴꜱ*"
+            "\n/mhelp  - ɢᴇᴛ ᴄᴏᴍᴍᴀɴᴅꜱ ʜᴇʟᴘᴇʀ ᴍᴇɴᴜ ᴡɪᴛʜ ᴅᴇᴛᴀɪʟᴇᴅ ᴇxᴘʟᴀɴᴀᴛɪᴏɴꜱ ᴏғ ᴄᴏᴍᴍᴀɴᴅꜱ.\n"
+            "\n/ping- ᴘɪɴɢ ᴛʜᴇ ʙᴏᴛ ᴀɴᴅ ᴄʜᴇᴄᴋ ʀᴀᴍ, ᴄᴘᴜ ᴇᴛᴄ ꜱᴛᴀᴛꜱ ᴏғ ʙᴏᴛ.\n"
+
+            "\nɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ:\n"
+            "\n/settings - ɢᴇᴛ a ᴄᴏᴍᴘʟᴇᴛᴇ ɢʀᴏᴜᴘ ꜱᴇᴛᴛɪɴɢꜱ ᴡɪᴛʜ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ\n"
+            ,
+            parse_mode=ParseMode.MARKDOWN,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(text="⤶  Gᴏ Bᴀᴄᴋ", callback_data="ABG_music"),
+                    ],
+                ]
+            ),
+        )
+
+
 
     elif query.data == "ABG_credit":  # Credit  i hope edit nai hoga
         query.message.edit_text(

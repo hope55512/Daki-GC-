@@ -83,6 +83,10 @@ buttons = [
         ),
     ],
     [
+        InlineKeyboardButton(text="🎵 Music", callback_data="ABG_music"),
+        InlineKeyboardButton(text="🤖 Ai", callback_data="ABG_ai"),
+    ],
+    [
         InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
         InlineKeyboardButton(text="📢 Update", url=f"https://t.me/{UPDATE_CHAT}"),
     ],
