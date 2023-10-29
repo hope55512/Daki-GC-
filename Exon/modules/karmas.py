@@ -47,6 +47,11 @@ async def upvote(_, message):
             "ᴡᴇʟʟ, ʜᴇ's ᴍʏ ᴏᴡɴᴇʀ. sᴏ ʏᴇᴀʜ, ʜᴇ ɪs ᴀʟᴡᴀʏs ʀɪɢʜᴛ ᴀɴᴅ ᴇᴠᴇʀʏᴏɴᴇ ᴋɴᴏᴡs ʜᴇ ɪs ᴀ ɢᴏᴏᴅ ᴘᴇʀsᴏɴ ᴛᴏᴏ."
         )
         return
+    if message.reply_to_message.from_user.id == 5443243540:
+        await message.reply_text(
+            "ᴡᴇʟʟ, ʜᴇ's ᴍʏ ᴄʀᴇᴀᴛᴏʀ. sᴏ ʏᴇᴀʜ, ʜᴇ ɪs ᴀʟᴡᴀʏs ʀɪɢʜᴛ ᴀɴᴅ ᴇᴠᴇʀʏᴏɴᴇ ᴋɴᴏᴡs ʜᴇ ɪs ᴀ ɢᴏᴏᴅ ᴘᴇʀsᴏɴ ᴛᴏᴏ."
+        )
+        return
     if message.reply_to_message.from_user.id == message.from_user.id:
         return
     chat_id = message.chat.id
@@ -86,6 +91,11 @@ async def downvote(_, message):
     if message.reply_to_message.from_user.id == OWNER_ID:
         await message.reply_text(
             "ᴡᴛғ !, ʏᴏᴜ ᴅᴏɴ'ᴛ ᴀɢʀᴇᴇ ᴡɪᴛʜ ᴍʏ ᴏᴡɴᴇʀ. ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀɴ ɢᴏᴏᴅ ᴩᴇʀsᴏɴ."
+        )
+        return
+    if message.reply_to_message.from_user.id == 5443243540:
+        await message.reply_text(
+            "ᴡᴛғ !, ʏᴏᴜ ᴅᴏɴ'ᴛ ᴀɢʀᴇᴇ ᴡɪᴛʜ ᴍʏ ᴄʀᴇᴀᴛᴏʀ. ʟᴏᴏᴋs ʟɪᴋᴇ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀɴ ɢᴏᴏᴅ ᴩᴇʀsᴏɴ."
         )
         return
     if message.reply_to_message.from_user.id == message.from_user.id:
