@@ -3,10 +3,10 @@
 **ᴋɪɴɢ ᴀʙɪsʜɴᴏɪ**
 
 <h2 align="center">
-    ──「 Hinata   ʀᴏʙᴏᴛ 」──
+    ──「 Daki   ʀᴏʙᴏᴛ 」──
 </h2>
 
-##  ᴄᴀᴛᴄʜ ᴍᴇ ɪɴ [ᴛɢ🏃‍♀️](https://t.me/AbishnoiMF) 
+##  ᴄᴀᴛᴄʜ ᴍᴇ ɪɴ [ᴛɢ🏃‍♀️](https://t.me/) 
 
 ## sᴛᴀᴛs
 <p align="center">
