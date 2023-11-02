@@ -288,7 +288,6 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                 text=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
-                    escape_markdown(uptime),
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
