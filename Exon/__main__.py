@@ -276,7 +276,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             )
 
             time.sleep(0.4)
-            lol.edit_text("❤️‍🔥")
+            lol.edit_text("😈")
             time.sleep(0.5)
             lol.edit_text("⚡")
             time.sleep(0.3)
