@@ -402,8 +402,8 @@ def stats(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
              "\n*ʙᴏᴛ sᴛᴀᴛɪsᴛɪᴄs*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + "\n\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/botupdatex) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/botsupportx) \n\n"
-            + f"『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Kira](t.me/SIAmKira)  』\n",
+            + "\n\n[𝗨𝗣𝗗𝗔𝗧𝗘𝗦](https://t.me/updatep1) |  [𝗦𝗨𝗣𝗣𝗢𝗥𝗧](https://t.me/kanaoXhizuru) \n\n"
+            + f"『 𝙈𝘼𝘿𝙀 𝘽𝙔 [Team-X](https://t.me/team_devsX)  』\n",
 
 
             parse_mode=ParseMode.MARKDOWN,
