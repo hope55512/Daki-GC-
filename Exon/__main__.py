@@ -81,7 +81,7 @@ PHOTO = [
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add Hinata To Your Group", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="Add Daki To Your Group", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
     ],
     [
