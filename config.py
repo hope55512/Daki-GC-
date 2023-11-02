@@ -22,7 +22,7 @@ class Config(object):
         "MONGO_DB_URI",
         "mongodb+srv://eren:eren@cluster0.aor5rcv.mongodb.net/?retryWrites=true&w=majority",
     )
-    DB_NAME = getenv("DB_NAME", "DakiV.2")
+    DB_NAME = getenv("DB_NAME", "DakiV2")
     REDIS_URL = "redis://default:wK6ZCiclq4iQKYpgfY90v6kd6WdPfEwl@redis-10186.c263.us-east-1-2.ec2.cloud.redislabs.com:10186/default"
     DATABASE_URL = getenv("DATABASE_URL", None)
 
