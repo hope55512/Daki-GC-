@@ -10,21 +10,28 @@ curr_chat_lang: "ʜᴇʏ. ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʟᴀɴɢᴜᴀɢᴇ ɪs
 set_chat_lang: "ɢʀᴇᴀᴛ, {} ɪᴛ ɪs ( ғʀᴏᴍ ɴᴏᴡ ᴏɴ!"
 
 
-
 pm_start_text: |
-   I Am Your Hinata bot 
-   let's  Unleash Organized Line Management, Music bot, and Futuristic AI Capabilities for Effortless Group Control! ◎🎵✨ Click Help button For More."
+   ────「 🄳🄰🄺🄸 (https://telegra.ph/file/8ac80b1be33a9368002dc.jpg) 」────
+   ❂ Hayi Hayi! {} Senpai,
+   Myself {} An Advance Management Bot Built to Manage Your Groups.
+   ───────────────────────
+   ⦿ Alive Since {}
+   ───────────────────────
+   Hit /help to find out more about how to use me to my full potential.
+
+
 grp_start_text: "ʜɪ, ɪ'ᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ."
 
 
 pm_help_text: |
-   Main commands available:
- 
-   ➛ /help: PM's you this message.  
+   Main commands available:[ ](https://telegra.ph/file/60367eeda9886bab0f7ef.jpg)
+
+   ➛ /help: PM's you this message.
    ➛ /help <module name>: PM's you info about that module.
+   ➛ /donate: information on how to donate!
    ➛ /settings:
-      ❂ in PM: will send you your settings for all supported modules.
-      ❂ in a group: will redirect you to pm, with all that chat's setting
+      ➛ in PM: will send you your settings for all supported modules.
+      ➛ in a group: will redirect you to pm, with all that chat's settings
 
 
 add_bot: "➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ"

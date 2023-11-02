@@ -81,29 +81,16 @@ PHOTO = [
 buttons = [
     [
         InlineKeyboardButton(
-            text="⚜️Add Hinata To Your Group⚜️", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="Add Hinata To Your Group", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
-    ],
-    [
-        InlineKeyboardButton(text="🎵 Music", callback_data="ABG_music"),
-        InlineKeyboardButton(text="🤖 Ai", callback_data="ABG_ai"),
     ],
     [
         InlineKeyboardButton(text="🚑 Support", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="📢 Update", url=f"https://t.me/{UPDATE_CHAT}"),
+        InlineKeyboardButton(text="🎵 Music", callback_data="ABG_music"),
     ],
     [
-        InlineKeyboardButton(text=f"⛩Help & Commands⛩", callback_data="help_back"),
+        InlineKeyboardButton(text=f"⛩Commands⛩", callback_data="help_back"),
     ]
-]
-
-aliveBtns = [
-    [
-        InlineKeyboardButton(
-            text="⚜️Add Hinata To Your Group⚜️",
-            url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
-        ),
-    ],
 ]
 
 IMPORTED = {}
@@ -283,16 +270,25 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
 
         else:
             first_name = update.effective_user.first_name
-            caption = "*Moshi Moshi* {}...".format(escape_markdown(first_name))
-            update.effective_message.reply_photo(random.choice(PHOTO), caption=caption, parse_mode=ParseMode.MARKDOWN)
+            usr = update.effective_user
+            lol = update.effective_message.reply_text(
+                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
+            )
 
-
-
+            time.sleep(0.4)
+            lol.edit_text("❤️‍🔥")
+            time.sleep(0.5)
+            lol.edit_text("⚡")
+            time.sleep(0.3)
+            lol.edit_text("Sᴛᴀʀᴛɪɴɢ ʙᴀʙʏ... ")
+            time.sleep(0.4)
+            lol.delete()
 
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
                     escape_markdown(first_name),
                     escape_markdown(context.bot.first_name),
+                    escape_markdown(uptime),
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
@@ -303,10 +299,10 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
 
     else:
         update.effective_message.reply_photo(
-            "https://telegra.ph/file/be6f04b512ec26376d875.jpg",
+            "https://telegra.ph/file/8ac80b1be33a9368002dc.jpg",
             caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
-            ),reply_markup=InlineKeyboardMarkup(aliveBtns),
+            ),
             parse_mode=ParseMode.HTML,
         )
 
