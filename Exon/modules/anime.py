@@ -248,14 +248,14 @@ def anime(update: Update, context: CallbackContext):
                     InlineKeyboardButton("ᴛʀᴀɪʟᴇʀ 🎬", url=trailer),
                 ],
                 [
-                    InlineKeyboardButton("🍿 ᴅᴏᴡɴʟᴏᴀᴅ 🍿", url=f"https://t.me/AnimeXInsider"),
+                    InlineKeyboardButton("🍿 ᴅᴏᴡɴʟᴏᴀᴅ 🍿", url=f"https://t.me/AnimeX_Horizon"),
                 ],
             ]
         else:
             buttons = [
                 [
                     InlineKeyboardButton("ᴍᴏʀᴇ ɪɴғᴏ", url=info),
-                    InlineKeyboardButton("🍿 ᴅᴏᴡɴʟᴏᴀᴅ 🍿", url=f"https://t.me/Animez_96"),
+                    InlineKeyboardButton("🍿 ᴅᴏᴡɴʟᴏᴀᴅ 🍿", url=f"https://t.me/AnimeX_Horizon"),
                 ],
             ]
         if image:
