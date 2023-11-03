@@ -66,7 +66,7 @@ class GoogleReverseImageSearch:
 
 from pyrogram import filters
 import requests
-from Chizuru import pgram as app, TOKEN as bot_token
+from  import pgram as app, TOKEN as bot_token
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 # Constants
 MAX_FILE_SIZE = 3145728
