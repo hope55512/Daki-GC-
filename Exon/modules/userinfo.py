@@ -313,10 +313,10 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "💉 Hᴇᴀʟᴛʜ", url="https://t.me/HoshinoXUpdates/13"
+                                "💉 Hᴇᴀʟᴛʜ", url="https://t.me/updatep1/3"
                             ),
                             InlineKeyboardButton(
-                                "🐉 Dɪsᴀsᴛᴇʀ", url="https://t.me/HoshinoXUpdates/14"
+                                "🐉 Dɪsᴀsᴛᴇʀ", url="https://t.me/updatep1/4"
                             ),
                         ],
                     ]
