@@ -25,15 +25,15 @@ tomorrow = str(dt_tom())
 today = str(dt()[0])
 
 CAP = """
-ღ✦✧✧**Naruto-Hinata of The Day**✧✧✦დ
+ღ✦✧✧**Couple of The Day**✧✧✦დ
 
 *•.¸♡{} 💘 {}
 *•.¸♡Have a Good Day 
 *•.¸♡New couple of the day can be chosen at
 *•.¸♡12AM {}
-*•.¸♡By Hinata Bot💖
+*•.¸♡By Daki Bot💖
 """
-COUPLES_PIC = "https://te.legra.ph/file/8b5cede92c3ff388427b1.jpg"
+COUPLES_PIC = "https://telegra.ph/file/aacb900acb3a779ec0afe.jpg"
 
 @app.on_message(filters.command("scouple") & filters.group)
 async def _chutiya(_, message):
@@ -92,7 +92,7 @@ async def nibba_nibbi(_, message):
 *•.¸♡Have a Good Day 
 *•.¸♡New couple of the day can be chosen at
 *•.¸♡12AM {tomorrow}
-*•.¸♡By Hinata Bot💖**"""
+*•.¸♡By Daki Bot💖**"""
                 await _.send_photo(message.chat.id, photo=COUPLES_PIC, caption=couple_selection_message)
             except:
                 couple_selection_message = f"""**ღ ━━ Naruto-Hinata of The Day ━━ დ
@@ -101,7 +101,7 @@ async def nibba_nibbi(_, message):
 *•.¸♡Have a Good Day 
 *•.¸♡New couple of the day can be chosen at
 *•.¸♡12AM {tomorrow}
-*•.¸♡By Hinata Bot💖**"""
+*•.¸♡By Daki Bot💖**"""
                 await _.send_photo(message.chat.id, photo=COUPLES_PIC, caption=couple_selection_message)
     except Exception as e:
         print(e)
