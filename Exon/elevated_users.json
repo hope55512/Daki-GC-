@@ -1,22 +1,13 @@
 {
     "devs": [],
-    
     "supports": [],
-    
-    "whitelists": [],
-    
-    "spammers": [],
-    
-    "dragons": [5443243540],
-    
-    "demons": [6312693124],
-    
-    "wolfes": [],
-    
-    "heroes": [],
-    
+    "whitelists": [], 
+    "spammers": [], 
+    "dragons": [5443243540],  
+    "demons": [6312693124]    
+    "wolfes": [],   
+    "heroes": [],  
     "tigers": [],
-    
     "sudos": [],
     
 }
