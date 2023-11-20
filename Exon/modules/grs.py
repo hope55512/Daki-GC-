@@ -7,8 +7,8 @@ import requests
 from urllib.parse import quote_plus, unquote
 from bs4 import BeautifulSoup
 from unidecode import unidecode
-from repo import pbot as app
-from repo import bot_token
+from Exon import Abishnoi as app
+from Exon import bot_token
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import ParseMode
