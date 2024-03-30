@@ -126,7 +126,7 @@ def chatbot(update: Update, context: CallbackContext):
         return
 if message.text and not message.document:
         if not fallen_message(context, message):
-            return
+        return
         bot.send_chat_action(chat_id, action="typing")
         url = f"https://pervert-api.onrender.com/chatbot/{message.text}"
         request = requests.get(url)
