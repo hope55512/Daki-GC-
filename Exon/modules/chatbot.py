@@ -124,24 +124,18 @@ def chatbot(update: Update, context: CallbackContext):
     is_fallen = sql.is_fallen(chat_id)
     if is_fallen:
         return
-
-    if message.text and not message.document:
+if message.text and not message.document:
         if not fallen_message(context, message):
             return
         bot.send_chat_action(chat_id, action="typing")
-        request = requests.get(
-            f"https://chat.merissabot.me/api/apikey=5715764478-MERISSAPy8wmE0ei5/hinata/peanut/message={message.text}"
-        )
-        
-        if request.status_code == 200:
-            try:
-                results = json.loads(request.text)
-                message.reply_text(results["reply"])
-            except json.JSONDecodeError:
-                message.reply_text("Failed to decode the chatbot response.")
-        else:
-            message.reply_text(f"Request to chatbot API failed with status code {request.status_code}.")
-            
+        url = f"https://pervert-api.onrender.com/chatbot/{message.text}"
+        request = requests.get(url)
+        results = json.loads(request.text)
+        sleep(0.5)
+        message.reply_text(results["reply"])
+
+
+
 __help__ = f"""
 *{BOT_NAME} has an chatbot which provides you a seemingless chatting experience :*
 
