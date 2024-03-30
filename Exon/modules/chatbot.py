@@ -124,19 +124,17 @@ def chatbot(update: Update, context: CallbackContext):
     is_fallen = sql.is_fallen(chat_id)
     if is_fallen:
         return
-if message.text and not message.document:
-    if not fallen_message(context, message):
-        return
-    bot.send_chat_action(chat_id, action="typing")
-    url = f"https://pervert-api.onrender.com/chatbot/{message.text}"
-    request = requests.get(url)
-    results = json.loads(request.text)
-    sleep(0.5)
-    message.reply_text(results["reply"])
 
-
-
-
+    if message.text and not message.document:
+        if not fallen_message(context, message):
+            return
+        bot.send_chat_action(chat_id, action="typing")
+        url = f"https://pervert-api.onrender.com/chatbot/{message.text}"
+        request = requests.get(url)
+        results = json.loads(request.text)
+        sleep(0.5)
+        message.reply_text(results["reply"])
+        
 __help__ = f"""
 *{BOT_NAME} has an chatbot which provides you a seemingless chatting experience :*
 
@@ -166,4 +164,4 @@ __handlers__ = [
     CHATBOTK_HANDLER,
     RM_CHAT_HANDLER,
     CHATBOT_HANDLER,
-            ]
+                ]
